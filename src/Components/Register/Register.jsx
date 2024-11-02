@@ -7,7 +7,7 @@ import './Register.css';
 const Register = () => {
   return (
     <>
-        <div className='w-full h-screen flex items-center justify-around p-3'>
+        <div className='w-full h-screen flex items-center justify-between p-3'>
             <div className='w-[2/3] h-full LS'>
                 <img src={leftSideimage} className='h-[100%] w-full object-contain'/> 
             </div>
