@@ -1,3 +1,4 @@
+ doaa
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -35,6 +36,17 @@ function App() {
     </>
     
   )
+
+import "./App.css";
+import SideBar from "./Components/SideBar";
+
+function App() {
+  return (
+    <>
+      <SideBar />
+    </>
+  );
+ main
 }
 
-export default App
+export default App;

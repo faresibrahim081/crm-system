@@ -10,10 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+ doaa
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.5",
     "@mui/material": "^6.1.5",
+
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
+ main
     "axios": "^1.7.7",
     "framer-motion": "^11.11.10",
     "react": "^18.3.1",
@@ -29,7 +36,7 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.13",
+    "daisyui": "^4.12.14",
     "eslint": "^9.13.0",
     "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "^5.0.0",
