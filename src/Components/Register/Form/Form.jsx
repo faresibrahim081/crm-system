@@ -34,7 +34,7 @@ const Form = () => {
                   {field.label}
                 </label>
                 <input
-                  className="text-right border rounded-[10px] w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#00FFA9]"
+                  className="text-right border rounded-[10px] w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-1 focus:ring-[#00FFA9]"
                   id={field.id}
                   type={field.type}
                   placeholder={field.placeholder}
