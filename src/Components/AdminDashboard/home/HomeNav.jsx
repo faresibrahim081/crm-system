@@ -1,4 +1,4 @@
-import logo from "../../assets/Media/logo.png";
+import logo from "../../../assets/Media/logo.png";
 
 
 function HomeNav() {

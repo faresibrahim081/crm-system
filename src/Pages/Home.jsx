@@ -1,6 +1,6 @@
-import HomeFooter from "../Components/home/HomeFooter";
-import HomeLayout from "../Components/home/HomeLayout";
-import HomeNav from "../Components/home/HomeNav";
+import HomeFooter from "../Components/AdminDashboard/home/HomeFooter";
+import HomeLayout from "../Components/AdminDashboard/home/HomeLayout";
+import HomeNav from "../Components/AdminDashboard/home/HomeNav";
 
 function Home() {
   return (
