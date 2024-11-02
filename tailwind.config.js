@@ -11,4 +11,8 @@ module.exports = {
     themes: [],
   },
   plugins: [require("daisyui")],
+  
+    rtl: true,
+    
+  
 };
