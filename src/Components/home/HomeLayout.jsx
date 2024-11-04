@@ -1,7 +1,7 @@
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import bgImg from "../../assets/Media/bg.png";
-import charts from "../../assets/Media/test.png";
-import stars from "../../assets/Media/Frame 2095584759.png";
+import charts from "../../assets/Media/Group 3.png";
+import stars from "../../assets/Media/Frame 2095584759 (1).png";
 
 function HomeLayout() {
   return (
@@ -20,7 +20,7 @@ function HomeLayout() {
               بكفاءة باستخدام اقوي <br />
               <bdi>CRM</bdi> نظام 
             </h1>
-            <p className="text-gray-400 text-[18px] lg:text-[14px]">
+            <p className="text-gray-100 text-[18px] lg:text-[14px]">
               يساعد ZBOOMA CRM الشركات على تطوير الأعمال <br />
               باستخدام التكنولوجيا والميزات التي تجعل الأمر أسهل<br></br>{" "}
               للمستخدمين.
@@ -28,21 +28,21 @@ function HomeLayout() {
             <div className="flex gap-3 ">
               <a
                 href=""
-                className="rounded-3xl bg-white text-[14px] shadow-sm py-2 px-4"
+                className="rounded-3xl  text-[14px] shadow-sm shadow-slate-100 py-2 px-4"
               >
                 {" "}
                  تجربة مجانية
               </a>
               <a
                 href=""
-                className="rounded-3xl w-[120px] line-clamp-1 flex items-center gap-2 bg-[#00FFA9] shadow-sm py-2 px-4"
+                className="rounded-3xl w-[120px] line-clamp-1 flex items-center gap-2 bg-[#00c853] shadow-sm py-2 px-4"
               >
                 <FaLongArrowAltLeft /> <span>جرب الان</span>
               </a>
             </div>
             <div className="">
                 <img src={stars} alt="..." />
-                <p className="text-gray-400 text-[14px]">من 500 تقييم</p>
+                <p className=" text-[14px]">من 500 تقييم</p>
             </div>
           </div>
         </div>
