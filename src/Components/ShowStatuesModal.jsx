@@ -8,10 +8,13 @@ function ShowStatuesModal() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
+    <div className="flex items-center justify-center">
       {/* Button to open the modal */}
-      <button onClick={toggleModal} className="btn btn-primary">
-        فتح النموذج
+      <button
+        onClick={toggleModal}
+        className="bg-[#00c853] hover:bg-[#0C563E] duration-300 text-white font-semibold py-2 px-4 rounded-md h-14"
+      >
+        عرض الحالة
       </button>
 
       {/* Modal */}
