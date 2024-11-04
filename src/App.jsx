@@ -1,20 +1,12 @@
-import { useState } from "react";
-import "./App.css";
-import Register from "./Components/Forms/Register/Register";
-import "./App.css";
-import SideBar from "./Components/SideBar";
-import Home from "./Pages/Home";
-// import ShowStatuesModal from "./Components/ShowStatuesModal";
-import Chat from "./Pages/Chat";
+import './App.css'
+import CustomersT from './Components/CustomersT'
+
 
 function App() {
   return (
     <>
-      <SideBar />
-      {/* <ShowStatuesModal /> */}
-      <Chat />
-      {/* <Home/> */}
-      {/* <Register /> */}
+
+    <CustomersT/>
     </>
   );
 }

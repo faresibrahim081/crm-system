@@ -1,0 +1,63 @@
+body {
+   
+    background-color: #292929; 
+    color: white;
+}
+.table-container{
+    background-color: black;
+    border-radius: 8px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: black;
+}
+
+
+.selectplace {
+    margin-bottom: 50px;
+}
+
+
+/* Responsive*/
+@media (max-width: 768px) {
+    .table-container { 
+        margin: 20px; 
+        padding: 10px; 
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+}
+
