@@ -31,7 +31,7 @@ function HomeNav() {
             <FaUserTie className="size-5" />
             <span>مستخدم</span>
           </button>
-          <button className="rounded-md flex gap-2 items-center w-fit line-clamp-1 bg-[#00c853] shadow-sm py-2 px-4">
+          <button className="rounded-md flex gap-2 items-center w-fit line-clamp-1 bg-[#0f3d22] shadow-sm py-2 px-4">
           <MdAdminPanelSettings className="size-5" />
             <span>مسئول</span>
           </button>
