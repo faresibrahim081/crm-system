@@ -4,13 +4,13 @@ import Register from "./Components/Forms/Register/Register";
 import "./App.css";
 import SideBar from "./Components/SideBar";
 import Home from "./Pages/Home";
-// import ShowDetailsModal from "./Components/ShowDetailsModal";
+import ShowStatuesModal from "./Components/ShowStatuesModal";
 
 function App() {
   return (
     <>
       <SideBar />
-      {/* <ShowDetailsModal /> */}
+      <ShowStatuesModal />
       {/* <Home/> */}
       {/* <Register /> */}
     </>
