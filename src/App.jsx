@@ -8,9 +8,9 @@ import Home from "./Pages/Home";
 function App() {
   return (
     <>
-      <SideBar />
+      {/* <SideBar /> */}
       {/* <Home/> */}
-      {/* <Register /> */}
+      <Register />
     </>
   );
 }

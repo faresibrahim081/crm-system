@@ -7,15 +7,15 @@ import "./Register.css";
 const Register = () => {
   return (
     <>
-      <div className="w-full h-screen flex gap-[5%] items-center justify-center p-3">
+      <div className="w-full h-screen flex gap-[5%] items-center justify-center p-3 bg-[#292929]">
         <div className="w-[2/3] h-full LS">
-          <div class="relative group h-[100%] w-full">
+          <div className="relative group h-[100%] w-full">
             <img
               src={leftSideimage}
-              class="h-full w-full object-contain"
+              className="h-full w-full object-contain"
               alt="Image"
             />
-            <div class="absolute text-right inset-0 flex items-center justify-center bg-white bg-opacity-80 text-black text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute text-right inset-0 flex items-center justify-center bg-white bg-opacity-80 text-black text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               :أدخل بياناتك في الحقول التالية <br />
               <br />
               لإنشاء حساب جديد - <br />
