@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Chat.css";
 
 const ChatModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,11 +49,11 @@ const ChatModal = () => {
               {messages.map((msg, index) => (
                 <div
                   key={index}
-                  className={`chat ${msg.isUser ? "chat-end" : "chat-start"}`}
+                  className={`chat ${msg.isUser ? "chat-start" : "chat-end"}`}
                 >
                   <div
                     className={`chat-bubble ${
-                      msg.isUser ? "bg-gray-500" : "bg-green-600"
+                      msg.isUser ? "bg-green-600" : "bg-gray-500"
                     } text-white`}
                   >
                     {msg.text.split("\n").map((line, i) => (

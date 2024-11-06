@@ -1,16 +1,7 @@
-import "./Home.css"
-
+import "./Home.css";
 
 function Home() {
-    
-  return (
-    <div className=" overflow-hidden my-background ">
-
-       
-
-    </div>
-
-  )
+  return <div className="overflow-hidden my-background"></div>;
 }
 
-export default Home
+export default Home;
