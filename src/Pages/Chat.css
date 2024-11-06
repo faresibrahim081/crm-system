@@ -1,0 +1,5 @@
+/* Custom styles to remove the chat bubble triangle */
+.chat-bubble::before {
+    display: none;
+  }
+  
