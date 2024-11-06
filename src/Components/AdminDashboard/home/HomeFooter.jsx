@@ -7,7 +7,7 @@ import img2 from "../../../assets/Media/Vector.png";
 function HomeFooter() {
   const imgList = [img1, img2, img3, img4, img5];
   return (
-    <div className="bg-[#f0fffa] py-3 px-20 md:h-[12vh] gap-7 w-full flex justify-around md:justify-between items-center flex-wrap">
+    <div className="bg-[#292929] py-3 px-20 md:h-[12vh] gap-7 w-full flex justify-around md:justify-between items-center flex-wrap">
       {imgList.map((item, index) => {
         return (
           <a href="" key={index}>

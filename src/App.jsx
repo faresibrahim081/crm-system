@@ -1,33 +1,20 @@
-import { useState } from "react";
+import React from "react";
 import "./App.css";
 import Register from "./Components/Forms/Register/Register";
-import "./App.css";
-import SideBar from "./Components/SideBar";
 import Home from "./Pages/Home";
-import BarChart from "./Components/barChrt/BarChart";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <>
-    <HEAD/>
-    <SideBar/>
-    <Home/>
-    <Register/>
-    {/* <Home /> */}
-    <BarChart />
-    </>
-  )
-    
-// import BarChart from "./Components/barChrt/BarChart";
-// import Home from "./Pages/Home";
-
-// function App() {
-//   return (
-//     <>
-//       <Home />
-//       {/* <BarChart /> */}
-// >>>>>>> pr/12
-//     </>
-//   );
+    <div className="bg-[#292929]">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/register" element={<Register/>}/>
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import bgImg from "../../../assets/Media/bg.png";
 import charts from "../../../assets/Media/test.png";
-import stars from "../../../assets/Media/Frame 2095584759.png";
+import stars from "../../../assets/Media/Frame 2095584759 (1).png";
 
 function HomeLayout() {
   return (
@@ -43,15 +43,15 @@ function HomeLayout() {
               {/* Free trial button */}
               <a
                 href="#"
-                className="rounded-full w-[120px] flex items-center gap-2 bg-white shadow-sm py-2 px-4 h-14"
+                className="rounded-full w-[120px] flex items-center gap-2 bg-[#292929] text-white border-[1px] border-[solid] border-[white] px-4 h-14 hover:bg-[#0A8F0A] duration-300 hover:border-[1px] hover:border-[solid] hover:border-[#0A8F0A]"
               >
                 تجربة مجانية
               </a>
 
-              {/* Try now button with arrow icon */}
+              {/* Try now button with arrow icon */} 
               <a
                 href="#"
-                className="rounded-full w-[120px] flex items-center gap-2 bg-[#00FFA9] shadow-sm py-2 px-4 h-14"
+                className="rounded-full w-[120px] flex items-center gap-2 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4 h-14"
               >
                 <FaLongArrowAltLeft /> <span>جرب الان</span>
               </a>

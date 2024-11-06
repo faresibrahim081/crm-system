@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import axios from 'axios';
+import RegisterModal from './RegisterModal';
 
 const Form = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -58,12 +59,12 @@ const Form = () => {
                 {field.label}
               </label>
               <input
-                className="text-right border rounded-[10px] w-full py-2 px-3 text-[white] focus:outline-none focus:ring-1 focus:ring-[#00FFA9] bg-[#292929]"
+                className="text-right border rounded-[10px] w-full py-2 px-3 text-[white] focus:outline-none focus:ring-1 focus:ring-[#0A8F0A] bg-[#292929]"
                 id={field.id}
                 type={field.id === 'password' ? (showPassword ? 'text' : 'password') : field.type}
                 placeholder={field.placeholder}
                 value={formData[field.id]}
-                onChange={handleChange}
+                onChange={handleChange} x
               />
               {field.id === 'password' && (
                 <span
@@ -76,8 +77,8 @@ const Form = () => {
             </div>
           ))}
           <div>
-            <button className="bg-[#00FFA9] hover:bg-[#2ea880] mt-2 w-full text-white font-bold py-2 px-4 rounded-[10px] focus:outline-none focus:shadow-outline transition duration-300" type="submit">
-              انشاء حساب
+            <button className=" mt-2 w-full text-white font-bold rounded-[10px] focus:outline-none focus:shadow-outline transition duration-300" type="submit">
+              <RegisterModal />
             </button>
           </div>
 

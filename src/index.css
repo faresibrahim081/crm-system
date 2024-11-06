@@ -4,11 +4,8 @@
 @tailwind utilities;
 
 * {
-  font-family: "Cairo", sans-serif;
-  
-    
-  
+  font-family: "Cairo", sans-serif;  
 }
-html{
+/* html{
   background-color: #292929;
-}
+} */

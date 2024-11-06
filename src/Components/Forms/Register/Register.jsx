@@ -15,7 +15,7 @@ const Register = () => {
               className="h-full w-full object-contain"
               alt="Image"
             />
-            <div className="absolute text-right inset-0 flex items-center justify-center bg-white bg-opacity-80 text-black text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="rounded-[20px] absolute text-right inset-0 flex items-center justify-center bg-white bg-opacity-80 text-black text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               :أدخل بياناتك في الحقول التالية <br />
               <br />
               لإنشاء حساب جديد - <br />

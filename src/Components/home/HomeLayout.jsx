@@ -1,4 +1,5 @@
 import { FaLongArrowAltLeft } from "react-icons/fa";
+import bgImg from '../../assets/Media//bg.png'
 import bgImg from "../../assets/Media/bg.png";
 import charts from "../../assets/Media/Group 3.png";
 import stars from "../../assets/Media/Frame 2095584759 (1).png";

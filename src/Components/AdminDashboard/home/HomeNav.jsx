@@ -1,23 +1,24 @@
-src/Components/AdminDashboard/home/HomeNav.jsx
 import logo from "../../../assets/Media/logo.png";
 import { MdAdminPanelSettings } from "react-icons/md";
-import logo from "../../assets/Media/logo.png";
+// import logo from "../../assets/Media/logo.png";
 import { FaUserTie } from "react-icons/fa";
-src/Components/home/HomeNav.jsx
+import { useNavigate } from "react-router-dom";
+
 
 function HomeNav() {
+  const navigate = useNavigate();
   return (
     <div>
       <nav className="flex justify-between items-center h-[12vh] py-4">
         <div className="flex gap-3">
           <button
             onClick={() => document.getElementById("my_modal_2").showModal()}
-            className="rounded-3xl line-clamp-1 w-fit text-[14px] shadow-sm shadow-slate-100 py-2 px-4"
+            className="rounded-3xl line-clamp-1 w-fit text-[14px] shadow-sm text-[white] py-2 px-4 border-[1px] border-[solid] border-[white] hover:bg-[#0A8F0A] duration-300 hover:border-[1px] hover:border-[solid] hover:border-[#0A8F0A]"
           >
             {" "}
             تسجيل الدخول
           </button>
-          <button className="rounded-3xl w-fit line-clamp-1 bg-[#00c853] shadow-sm py-2 px-4">
+          <button onClick={() => navigate("/register")} className="rounded-3xl w-fit line-clamp-1 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4">
             مستخدم جديد
           </button>
         </div>
@@ -27,7 +28,7 @@ function HomeNav() {
       </nav>
       {/* dialog */}
       <dialog id="my_modal_2" className="modal">
-        <div className="modal-box w-[300px] flex justify-around items-center bg-[#292929]">
+        <div className="modal-box w-[300px] flex justify-around items-center bg-[#292929] ">
         <button
             className="rounded-md flex gap-2 items-center line-clamp-1 w-fit  shadow-slate-100 text-[14px] shadow-sm py-2 px-4"
           >
