@@ -4,13 +4,16 @@ import Register from "./Components/Forms/Register/Register";
 import "./App.css";
 import SideBar from "./Components/SideBar";
 import Home from "./Pages/Home";
-
+import BarChart from "./Components/barChrt/BarChart";
 function App() {
   return (
     <>
-      {/* <SideBar /> */}
-      {/* <Home/> */}
-      <Register />
+    <HEAD/>
+    <SideBar/>
+    <Home/>
+    <Register/>
+    {/* <Home /> */}
+    <BarChart />
     </>
   );
 }

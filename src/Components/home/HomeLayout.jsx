@@ -1,0 +1,54 @@
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import bgImg from "../../assets/Media/bg.png";
+import charts from "../../assets/Media/Group 3.png";
+import stars from "../../assets/Media/Frame 2095584759 (1).png";
+
+function HomeLayout() {
+  return (
+    <div>
+      <div
+        style={{ backgroundImage: `url(${bgImg})` }}
+        className={`h-[65vh] md:h-[70vh] px-10 w-full bg-center rounded-md bg-cover flex items-center  bg-no-repeat relative capitalize overflow-hidden`}
+      >
+        <div className="p-0 m-0 flex gap-10 mx-auto ">
+          <div>
+            <img src={charts} className="h-[55vh] w-[50vw] hidden lg:block" alt="00....." />
+          </div>
+          <div className="text-center lg:text-right flex flex-col items-center lg:items-end gap-5">
+            <h1 className="text-4xl">
+              قم بتحسين عملك <br />
+              بكفاءة باستخدام اقوي <br />
+              <bdi>CRM</bdi> نظام 
+            </h1>
+            <p className="text-gray-100 text-[18px] lg:text-[14px]">
+              يساعد ZBOOMA CRM الشركات على تطوير الأعمال <br />
+              باستخدام التكنولوجيا والميزات التي تجعل الأمر أسهل<br></br>{" "}
+              للمستخدمين.
+            </p>
+            <div className="flex gap-3 ">
+              <a
+                href=""
+                className="rounded-3xl  text-[14px] shadow-sm shadow-slate-100 py-2 px-4"
+              >
+                {" "}
+                 تجربة مجانية
+              </a>
+              <a
+                href=""
+                className="rounded-3xl w-[120px] line-clamp-1 flex items-center gap-2 bg-[#00c853] shadow-sm py-2 px-4"
+              >
+                <FaLongArrowAltLeft /> <span>جرب الان</span>
+              </a>
+            </div>
+            <div className="">
+                <img src={stars} alt="..." />
+                <p className=" text-[14px]">من 500 تقييم</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default HomeLayout;
