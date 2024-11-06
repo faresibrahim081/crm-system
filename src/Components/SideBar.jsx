@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo from "../assets/Media/logo.png";
 import { LuHome } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa";
@@ -25,16 +25,18 @@ const SideBar = () => {
   };
 
   return (
-    <div className="flex w-64 h-screen flex-col justify-between border-e right-0 absolute">
-      <div className="px-4 py-6 flex flex-col justify-center items-end w-full space-y-5">
-        <span className="grid place-content-center rounded-lg text-xs text-gray-600">
+    <div className="fixed top-0 right-0 w-64 h-screen bg-black border-e">
+      {" "}
+      {/* Fixed sidebar on the right */}
+      <div className="flex flex-col items-end justify-center w-full px-4 py-6 space-y-5">
+        <span className="grid text-xs text-gray-600 rounded-lg place-content-center">
           <img src={logo} />
         </span>
 
-        <div className="space-y-2 w-full flex flex-col items-end">
+        <div className="flex flex-col items-end w-full space-y-2">
           {links.map((link, i) => (
-            <ul className="space-y-1 w-full text-right">
-              <li key={i}>
+            <ul className="w-full space-y-1 text-right" key={i}>
+              <li>
                 <a
                   href="#"
                   className={`flex items-center justify-end gap-2 rounded-lg px-4 py-3 text-sm text-gray-700 font-semibold
@@ -46,35 +48,33 @@ const SideBar = () => {
                   onClick={() => handleLinkClick(link.title)}
                 >
                   {link.title}
-                  <link.icon className="text-xl ml-2" />
+                  <link.icon className="ml-2 text-xl" />
                 </a>
               </li>
             </ul>
           ))}
         </div>
       </div>
-
       {/* PROFILE_HERE */}
-      <div className="sticky inset-x-0 bottom-0 border-t border-gray-100 flex items-center justify-between">
+      <div className="sticky inset-x-0 bottom-0 flex items-center justify-between border-t border-gray-100">
         <a
           href="#"
-          className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
+          className="flex items-center gap-2 p-4 bg-white hover:bg-gray-50"
         >
           <img
             alt=""
             src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            className="size-10 rounded-full object-cover"
+            className="object-cover rounded-full size-10"
           />
 
           <div className="">
             <p className="text-xs">
               <strong className="block font-medium">Eric Frusciante</strong>
-
               <span> eric@frusciante.com </span>
             </p>
           </div>
         </a>
-        <span className="text-2xl p-4 text-red-400 hover:text-red-700 cursor-pointer">
+        <span className="p-4 text-2xl text-red-400 cursor-pointer hover:text-red-700">
           <PiSignOut />
         </span>
       </div>

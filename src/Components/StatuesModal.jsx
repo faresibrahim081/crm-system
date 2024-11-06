@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ShowStatuesModal() {
+function StatuesModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
@@ -12,7 +12,7 @@ function ShowStatuesModal() {
       {/* Button to open the modal */}
       <button
         onClick={toggleModal}
-        className="bg-[#00c853] hover:bg-[#0C563E] duration-300 text-white font-semibold py-2 px-4 rounded-md h-14"
+        className="bg-[#00c853] hover:bg-[#0C563E] duration-300 text-white font-semibold py-2 px-4 rounded-md h-8"
       >
         عرض الحالة
       </button>
@@ -133,4 +133,4 @@ function ShowStatuesModal() {
   );
 }
 
-export default ShowStatuesModal;
+export default StatuesModal;

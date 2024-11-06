@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Chat.css";
 
 const ChatModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +39,7 @@ const ChatModal = () => {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center overflow-y-auto bg-black bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center overflow-y-auto bg-black bg-opacity-50 ">
           <div className="w-full p-4 max-h-[90vh] overflow-y-auto bg-[#292929] rounded-lg shadow-lg md:w-1/2 lg:w-1/3">
             <h2 className="mb-1 text-lg font-bold text-right text-white">
               محادثة
