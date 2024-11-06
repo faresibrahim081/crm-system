@@ -15,7 +15,19 @@ function App() {
     {/* <Home /> */}
     <BarChart />
     </>
-  );
+  )
+    
+// import BarChart from "./Components/barChrt/BarChart";
+// import Home from "./Pages/Home";
+
+// function App() {
+//   return (
+//     <>
+//       <Home />
+//       {/* <BarChart /> */}
+// >>>>>>> pr/12
+//     </>
+//   );
 }
 
 export default App;
