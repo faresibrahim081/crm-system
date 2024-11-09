@@ -19,7 +19,7 @@ const CreateAppointment = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-5 justify-around items-center w-full">
+    <div className="flex flex-col gap-5 justify-around items-center w-full ">
       <div className="flex justify-end items-center w-full pr-10">
         <h1 className="text-white font-semibold text-2xl">إنشاء ميعاد</h1>
       </div>
