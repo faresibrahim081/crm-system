@@ -23,7 +23,7 @@ function Sign() {
   }
   return (
     <div className="Sign">
-      <div className="middle md:flex justify-between items-center">
+      <div className="items-center justify-between middle md:flex">
         <div className="main md:w-[40%] h-screen flex justify-center flex-col items-center  ">
           <img
             src={logo}
@@ -42,7 +42,7 @@ function Sign() {
               action="#"
               method="get"
               onSubmit={submit}
-              className="flex items-center flex-col"
+              className="flex flex-col items-center"
             >
               <input
                 onChange={(e) => setEmail(e.target.value)}
@@ -75,7 +75,7 @@ function Sign() {
                 <Link to={"/registerAdmin"} className="text-[#3679FD]  underline"> انشئ الان </Link>
               </p>
             </form>
-              <div className="flex justify-center items-center gap-3 mt-8">
+              <div className="flex items-center justify-center gap-3 mt-8">
           <Link to={"/"} >
             <AdminPanelSettingsIcon  className="cursor-pointer text-[#232323]"  style={{ fontSize: "35px" }}/>
           </Link>
