@@ -23,15 +23,7 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: [
-      "dark"
-    ],
+
   },
-  plugins: [
-    require("daisyui"),
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/container-queries"),
-  ],
+  plugins: [require("daisyui")],
 };

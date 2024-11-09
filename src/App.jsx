@@ -1,12 +1,9 @@
 import "./App.css";
-// import BarChart from "./Components/barChrt/BarChart";
-import Home from "./Pages/Home";
-
+import CustomersPage from "./Pages/AdminPages/CustomersPage";
 function App() {
   return (
     <>
-      <Home />
-      {/* <BarChart /> */}
+      <CustomersPage />
     </>
   );
 }
