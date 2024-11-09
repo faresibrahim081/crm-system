@@ -5,6 +5,9 @@
 
 * {
   font-family: "Cairo", sans-serif;
+  /* box-sizing:border-box; */
+  scroll-behavior: smooth;
+  direction:rtl
 }
 .chat-bubble::before {
   display: none;
