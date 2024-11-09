@@ -31,7 +31,6 @@ const Form = () => {
 
     axios.post('http://localhost/CRM/Registration.php', formData)
       .then(response => {
-        // console.log('Success:', response.data);
         setFormData({
           user_username: '',
           user_email: '',
@@ -61,14 +60,14 @@ const Form = () => {
               <input
                 className="text-right border rounded-[10px] w-full py-2 px-3 text-[white] focus:outline-none focus:ring-1 focus:ring-[#0A8F0A] bg-[#292929]"
                 id={field.id}
-                type={field.id === 'password' ? (showPassword ? 'text' : 'password') : field.type}
+                type={field.id === 'user_password' ? (showPassword ? 'text' : 'password') : field.type}
                 placeholder={field.placeholder}
                 value={formData[field.id]}
-                onChange={handleChange} x
+                onChange={handleChange}
               />
-              {field.id === 'password' && (
+              {field.id === 'user_password' && (
                 <span
-                  className="absolute inset-y-12 left-3 text-[gray] flex items-center cursor-pointer"
+                  className="w-[fit-content] absolute right-3 top-[38px] left-3 text-[gray] cursor-pointer"
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />}
@@ -77,7 +76,7 @@ const Form = () => {
             </div>
           ))}
           <div>
-            <button className=" mt-2 w-full text-white font-bold rounded-[10px] focus:outline-none focus:shadow-outline transition duration-300 border-[none]" type="submit">
+            <button className="mt-2 w-full text-white font-bold rounded-[10px] focus:outline-none focus:shadow-outline transition duration-300 border-[none]" type="submit">
               <RegisterModal />
             </button>
           </div>
