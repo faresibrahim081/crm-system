@@ -11,7 +11,7 @@ function HomeLayout() {
         style={{ backgroundImage: `url(${bgImg})` }}
         className="h-[65vh] md:h-[70vh] px-10 w-full bg-center rounded-md bg-cover flex items-center bg-no-repeat relative capitalize overflow-hidden"
       >
-        <div className="p-0 m-0 flex gap-10 mx-auto">
+        <div className="flex gap-10 p-0 m-0 mx-auto">
           {/* Chart image - visible on larger screens */}
           <div className="flex-1 ">
             <img
@@ -22,7 +22,7 @@ function HomeLayout() {
           </div>
 
           {/* Content container - text and action buttons */}
-          <div className="flex-1 text-center lg:text-right flex flex-col items-center lg:items-end gap-5">
+          <div className="flex flex-col items-center flex-1 gap-5 text-center lg:text-right lg:items-end">
             {/* Heading with Arabic text and inline CRM abbreviation */}
             <h1 className="text-2xl lg:text-6xl">
               قم بتحسين عملك <br />
@@ -31,7 +31,7 @@ function HomeLayout() {
             </h1>
 
             {/* Description paragraph */}
-            <p className="text-gray-400 text-xs lg:text-xl">
+            <p className="text-xs text-gray-400 lg:text-xl">
               ZBOOMA CRM <br />
               يساعد الشركات على تطويير الأعمال <br />
               باستخدام التطنولوجيا والميزات التي تجعل الأمر سهلا <br />
@@ -48,7 +48,7 @@ function HomeLayout() {
                 تجربة مجانية
               </a>
 
-              {/* Try now button with arrow icon */} 
+              {/* Try now button with arrow icon */}
               <a
                 href="#"
                 className="rounded-full w-[120px] flex items-center gap-2 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4 h-14"

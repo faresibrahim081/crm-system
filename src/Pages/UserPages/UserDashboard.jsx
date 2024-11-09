@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "../Card";
+import Card from "../../Components/UserDashboard/Card";
 import { MdAccountCircle } from "react-icons/md";
-import ProjectDetails from "../ProjectDetails";
-import YourTime from "../YourTime";
-import ChatModal from "../../AdminDashboard/chats/ChatModal";
+import ProjectDetails from "../../Components/UserDashboard/ProjectDetails";
+import YourTime from "../../Components/UserDashboard/YourTime";
+import ChatModal from "../../Components/AdminDashboard/chats/ChatModal";
 function UserControl() {
   const cards = [
     {

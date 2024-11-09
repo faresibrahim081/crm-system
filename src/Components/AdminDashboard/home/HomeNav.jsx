@@ -4,7 +4,6 @@ import { MdAdminPanelSettings } from "react-icons/md";
 import { FaUserTie } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-
 function HomeNav() {
   const navigate = useNavigate();
   return (
@@ -18,7 +17,10 @@ function HomeNav() {
             {" "}
             تسجيل الدخول
           </button>
-          <button onClick={() => navigate("/register")} className="rounded-3xl w-fit line-clamp-1 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4">
+          <button
+            onClick={() => navigate("/register")}
+            className="rounded-3xl w-fit line-clamp-1 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4"
+          >
             مستخدم جديد
           </button>
         </div>
@@ -29,15 +31,18 @@ function HomeNav() {
 
       <dialog id="my_modal_2" className="modal">
         <div className="modal-box w-[300px] flex justify-around items-center bg-[#292929] ">
-        <button
+          <button
             onClick={() => navigate("/user")}
             className="flex gap-3 rounded-3xl line-clamp-1 w-fit text-[14px] shadow-sm text-[white] py-2 px-4  hover:bg-[#0A8F0A] duration-300"
           >
-            <FaUserTie  className="size-5" />
+            <FaUserTie className="size-5" />
             <span>مستخدم</span>
           </button>
-          <button onClick={() => navigate("/sign")} className="flex gap-3 rounded-3xl w-fit line-clamp-1 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4">
-          <MdAdminPanelSettings className="size-5" />
+          <button
+            onClick={() => navigate("/sign")}
+            className="flex gap-3 rounded-3xl w-fit line-clamp-1 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4"
+          >
+            <MdAdminPanelSettings className="size-5" />
             <span>مسئول</span>
           </button>
         </div>
