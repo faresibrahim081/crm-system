@@ -55,7 +55,7 @@ const Form = () => {
         <form onSubmit={handleSubmit} className="bg-[#292929] w-full rounded space-y-2 pt-6 pb-8 mb-4">
           {formFields.map(field => (
             <div className="mb-3 relative" key={field.id}>
-              <label className="block text-gray-700 text-sm font-bold mb-2 text-right" htmlFor={field.id}>
+              <label className="block text-[#969696] text-sm font-bold mb-2 text-right" htmlFor={field.id}>
                 {field.label}
               </label>
               <input
@@ -77,7 +77,7 @@ const Form = () => {
             </div>
           ))}
           <div>
-            <button className=" mt-2 w-full text-white font-bold rounded-[10px] focus:outline-none focus:shadow-outline transition duration-300" type="submit">
+            <button className=" mt-2 w-full text-white font-bold rounded-[10px] focus:outline-none focus:shadow-outline transition duration-300 border-[none]" type="submit">
               <RegisterModal />
             </button>
           </div>
@@ -88,8 +88,8 @@ const Form = () => {
             <div className="flex-1 border-b border-gray-300"></div>
           </div>
 
-          <div className='text-center flex items-center justify-center gap-[8px] text-[12px]'>
-            <a className='text-[#367AFF] underline' href="#">سجل دخول</a>
+          <div className='text-center flex items-center justify-center gap-[8px] text-[white] text-[12px]'>
+            <a className='text-[#367AFF] underline' href="/user">سجل دخول</a>
             <p>لديك بالفعل حساب؟</p>
           </div>
         </form>

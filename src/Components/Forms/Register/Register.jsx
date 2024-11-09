@@ -2,13 +2,14 @@ import React from "react";
 import leftSideimage from "../../../assets/Media/Dashboard Login Page illustration.png";
 import topLeftSideimage from "../../../assets/Media/top.png";
 import Form from "./Form/Form";
+import { Link } from "react-router-dom";
 import "./Register.css";
 
 const Register = () => {
   return (
     <>
       <div className="w-full h-screen flex gap-[5%] items-center justify-center p-3 bg-[#292929]">
-        <div className="w-[2/3] h-full LS">
+        <div className="w-[2/3] h-full hidden md:block">
           <div className="relative group h-[100%] w-full">
             <img
               src={leftSideimage}
@@ -27,9 +28,11 @@ const Register = () => {
         </div>
         <div className="w-[1/3] h-full flex items-center justify-between flex-col RS">
           <div className="h-[9%]">
-            <img src={topLeftSideimage} />
+            <Link to='/'>
+              <img src={topLeftSideimage} />
+            </Link>
           </div>
-          <div className="h-[91%] flex items-center justify-around flex-col w-full ">
+          <div className="h-[91%] flex items-center justify-around flex-col w-full">
             <Form />
           </div>
         </div>

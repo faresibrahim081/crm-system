@@ -32,10 +32,10 @@ function HomeLayout() {
 
             {/* Description paragraph */}
             <p className="text-gray-400 text-xs lg:text-xl">
-              يساعد ZBOOMA CRM الشركات على تطوير الأعمال <br />
-              باستخدام التكنولوجيا والميزات التي تجعل الأمر أسهل
-              <br />
-              للمستخدمين.
+              ZBOOMA CRM <br />
+              يساعد الشركات على تطويير الأعمال <br />
+              باستخدام التطنولوجيا والميزات التي تجعل الأمر سهلا <br />
+              للمستخدمين
             </p>
 
             {/* Action buttons container */}
@@ -43,7 +43,7 @@ function HomeLayout() {
               {/* Free trial button */}
               <a
                 href="#"
-                className="rounded-full w-[120px] flex items-center gap-2 bg-[#292929] text-white border-[1px] border-[solid] border-[white] px-4 h-14 hover:bg-[#0A8F0A] duration-300 hover:border-[1px] hover:border-[solid] hover:border-[#0A8F0A]"
+                className="rounded-full w-[120px] flex items-center gap-2 bg-[#292929] text-white    px-4 h-14 hover:bg-[#0A8F0A] duration-300"
               >
                 تجربة مجانية
               </a>
