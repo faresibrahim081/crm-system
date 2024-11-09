@@ -21,7 +21,8 @@ function HomeLayout() {
               <bdi>CRM</bdi> نظام 
             </h1>
             <p className="text-gray-100 text-[18px] lg:text-[14px]">
-              يساعد ZBOOMA CRM الشركات على تطوير الأعمال <br />
+            ZBOOMA CRM <br/>
+              يساعد الشركات على تطوير الأعمال <br />
               باستخدام التكنولوجيا والميزات التي تجعل الأمر أسهل<br></br>{" "}
               للمستخدمين.
             </p>

@@ -7,6 +7,7 @@ const BarChart = () => {
       height: 350,
       type: "bar",
     },
+    colors: ['#0f430f'],
     plotOptions: {
       bar: {
         // borderRadius: 10,
@@ -18,12 +19,12 @@ const BarChart = () => {
     dataLabels: {
       enabled: true,
       formatter: function (val) {
-        return val + "%";
+        return val + ' ' +'Cients';
       },
       offsetY: -20,
       style: {
         fontSize: "12px",
-        colors: ["#00c853"],
+        colors: ["red"],
       },
     },
     xaxis: {
@@ -44,16 +45,16 @@ const BarChart = () => {
         show: false,
       },
       crosshairs: {
-        // fill: {
-        //   type: "gradient",
-        //   gradient: {
-        //     colorFrom: "#D8E3F0",
-        //     colorTo: "#BED1E6",
-        //     stops: [0, 100],
-        //     opacityFrom: 0.4,
-        //     opacityTo: 0.5,
-        //   },
-        // },
+        fill: {
+          type: "gradient",
+          gradient: {
+            colorFrom: "#D8E3F0",
+            colorTo: "#BED1E6",
+            stops: [0, 100],
+            opacityFrom: 0.4,
+            opacityTo: 0.5,
+          },
+        },
       },
       tooltip: {
         enabled: true,
