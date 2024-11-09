@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import img1 from "../assets/Dashboard Login Page illustration -1.png";
 import logo from "../assets/top.png";
-import PersonIcon from '@mui/icons-material/Person';
-import Rectangle from '../assets/Rectangle 1.png'
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import { FaPerson } from "react-icons/fa6";
+import Rectangle from "../assets/Rectangle 1.png";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import { Link } from "react-router-dom";
 import axios from "axios";
 function User() {
@@ -23,7 +23,7 @@ function User() {
   }
   return (
     <div className="Sign">
-      <div className="middle md:flex justify-between items-center">
+      <div className="items-center justify-between middle md:flex">
         <div className="main md:w-[40%] h-screen flex justify-center flex-col items-center  ">
           <img
             src={logo}
@@ -41,7 +41,7 @@ function User() {
               action="#"
               method="get"
               onSubmit={submit}
-              className="flex items-center flex-col"
+              className="flex flex-col items-center"
             >
               <input
                 onChange={(e) => setEmail(e.target.value)}
@@ -69,17 +69,29 @@ function User() {
               </div>
               <p className="text-[#959595] mt-[10px]">
                 تحتاج الي حساب؟
-                <Link to={"/registerUser"} className="text-[#3679FD]  underline"> انشئ الان </Link>
+                <Link
+                  to={"/registerUser"}
+                  className="text-[#3679FD]  underline"
+                >
+                  {" "}
+                  انشئ الان{" "}
+                </Link>
               </p>
             </form>
-            <div className="flex justify-center items-center gap-3 mt-8">
-          <Link to={"/"} >
-            <AdminPanelSettingsIcon  className="cursor-pointer text-[#232323]" style={{ fontSize: "35px" }}/>
-          </Link>
-          <Link to={"/User"}>
-            <PersonIcon className="cursor-pointer text-[#232323]" style={{ fontSize: "35px" }}/>
-          </Link>
-        </div>
+            <div className="flex items-center justify-center gap-3 mt-8">
+              <Link to={"/"}>
+                <AdminPanelSettingsIcon
+                  className="cursor-pointer text-[#232323]"
+                  style={{ fontSize: "35px" }}
+                />
+              </Link>
+              <Link to={"/User"}>
+                <FaPerson
+                  className="cursor-pointer text-[#232323]"
+                  style={{ fontSize: "35px" }}
+                />
+              </Link>
+            </div>
           </div>
         </div>
         <div className="hidden relative im2 overflow-hidden md:flex justify-center  items-center h-screen  w-[50%]">
