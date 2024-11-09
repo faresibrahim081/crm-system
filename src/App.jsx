@@ -1,9 +1,9 @@
 import "./App.css";
-import AdminDashboardPage from "./Pages/AdminPages/AdminDashboardPage";
+import CustomersPage from "./Pages/AdminPages/CustomersPage";
 function App() {
   return (
     <>
-      <AdminDashboardPage />
+      <CustomersPage />
     </>
   );
 }

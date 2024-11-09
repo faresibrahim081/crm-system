@@ -1,7 +1,7 @@
 import { useState } from "react";
-import SearchFilter from "../Components/SearchFilter";
-import ListCustomers from "../Components/ListCustomers";
-import SideBar from "../Components/SideBar";
+import SearchFilter from "../../Components/AdminDashboard/Utilities/SearchFilter";
+import ListCustomers from "../../Components/AdminDashboard/customers/ListCustomers";
+import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
 
 const ListUsers = () => {
   const [searchId, setSearchId] = useState("");
