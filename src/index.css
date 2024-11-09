@@ -5,7 +5,9 @@
 
 * {
   font-family: "Cairo", sans-serif;
-  
-    
-  
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #292929;
 }
