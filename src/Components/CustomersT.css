@@ -59,5 +59,10 @@ th {
         padding-left: 10px;
         font-weight: bold;
     }
+    .select-container {
+        width: 25%; 
+        padding-right: 10px;
+    }
 }
+
 
