@@ -6,6 +6,7 @@ import Appointments from "./Pages/AdminPages/AppointmentsPage";
 import CustomerPage from "./Pages/AdminPages/CustomersPage";
 import TicketsPage from "./Pages/AdminPages/TicketsPage";
 import AdminDashboardPage from "./Pages/AdminPages/AdminDashboardPage";
+
 function App() {
   return (
     <div className="App ">
