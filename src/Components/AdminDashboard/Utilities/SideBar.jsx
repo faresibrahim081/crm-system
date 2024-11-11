@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo1 from "../../../assets/Media/logo (2).png";
+import logo1 from "../assets/Media/logo (2).png";
 import { LuHome } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa";
 import { FaRegNoteSticky } from "react-icons/fa6";
@@ -28,7 +28,7 @@ const SideBar = () => {
     <>
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden fixed top-4 right-4 z-50 p-2 text-white bg-[#00c853] rounded-md"
+        className="md:hidden fixed z-50 p-2 text-white bg-[#00c853] rounded-md"
         onClick={() => setIsOpen(!isOpen)}
       >
         <FiMenu size={24} />
@@ -40,16 +40,16 @@ const SideBar = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         } md:translate-x-0 z-40`}
       >
-        <div className="px-4 py-6 flex flex-col justify-center items-end w-full space-y-5">
+        <div className="flex flex-col items-end justify-center w-full px-4 py-6 space-y-5">
           {/* Logo */}
-          <span className="grid place-content-center rounded-lg text-xs text-gray-600">
+          <span className="grid text-xs text-gray-600 rounded-lg place-content-center">
             <img src={logo1} alt="Logo" />
           </span>
 
           {/* Links */}
-          <div className="space-y-2 w-full flex flex-col items-end">
+          <div className="flex flex-col items-end w-full space-y-2">
             {links.map((link, i) => (
-              <ul key={i} className="space-y-1 w-full text-right">
+              <ul key={i} className="w-full space-y-1 text-right">
                 <li>
                   <a
                     href="#"
@@ -61,7 +61,7 @@ const SideBar = () => {
                     onClick={() => handleLinkClick(link.title)}
                   >
                     {link.title}
-                    <link.icon className="text-xl ml-2" />
+                    <link.icon className="ml-2 text-xl" />
                   </a>
                 </li>
               </ul>
@@ -78,14 +78,14 @@ const SideBar = () => {
             <img
               alt="Profile"
               src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-              className="w-10 h-10 rounded-full object-cover"
+              className="object-cover w-10 h-10 rounded-full"
             />
             <div className="text-xs">
               <strong className="block font-medium">Eric Frusciante</strong>
               <span> eric@frusciante.com </span>
             </div>
           </a>
-          <span className="text-2xl text-red-400 hover:text-red-700 cursor-pointer">
+          <span className="text-2xl text-red-400 cursor-pointer hover:text-red-700">
             <PiSignOut />
           </span>
         </div>
@@ -94,7 +94,7 @@ const SideBar = () => {
       {/* Overlay for mobile when sidebar is open */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-30 md:hidden"
+          className="fixed inset-0 z-30 bg-black opacity-50 md:hidden"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
