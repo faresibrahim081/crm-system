@@ -5,13 +5,13 @@ import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
 const AdminDashboardPage = () => {
   return (
     <div className="flex justify-between">
-      <div className="md:w-[70vw] flex flex-col justify-between bg-[#292929] mx-auto">
+      <div className= "w-full md:w-[70vw] flex flex-col gap-24 mx-auto">
         {/* Added margin-right to account for the sidebar */}
         <Stats />
         <Graph />
       </div>
       <div className="">
-      <SideBar /> {/* Sidebar now on the right */}
+      <SideBar />
       </div>
     </div>
   );

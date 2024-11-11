@@ -30,13 +30,13 @@ const DashboardHead = () => {
   ];
 
   return (
-    <div className="flex flex-col  items-center justify-center md:flex-row ">
+    <div className="flex flex-col items-center justify-center md:flex-row ">
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="flex rounded-lg items-center justify-between w-screen p-6 space-x-4 bg-[#0d0d0d] shadow"
+          className="flex items-center justify-around w-screen p-6 space-x-4 bg-[#0d0d0d] shadow"
         >
-          <div className="flex items-center justify-center w-16 h-16 bg-[#0f430f] rounded-full">
+          <div className="flex items-center justify-center w-16 h-16 bg-[linear-gradient(201.18deg,_#5CBF8A_3.14%,_#057639_86.04%)] rounded-full">
             {stat.icon}
           </div>
           <div className="flex flex-col text-right justify-center">

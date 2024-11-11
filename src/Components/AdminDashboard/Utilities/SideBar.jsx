@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo1 from "../../../assets/Media/logo.png";
 import { LuHome } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa";
@@ -28,7 +28,7 @@ const SideBar = () => {
     <>
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden fixed top-4 right-4 z-50 p-2 text-white bg-[#00c853] rounded-md"
+        className="md:hidden fixed z-50 p-2 text-white bg-[#00c853] rounded-md"
         onClick={() => setIsOpen(!isOpen)}
       >
         <FiMenu size={24} />
