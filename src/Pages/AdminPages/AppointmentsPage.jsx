@@ -1,5 +1,3 @@
-import React from "react";
-import Search from "../Components/AdminDashboard/Appointments/Search";
 import CreateAppointment from "../Components/AdminDashboard/Appointments/CreateAppointment";
 import AppointmentsTable from "../Components/AdminDashboard/Appointments/AppointmentsTable";
 import SideBar from "../Components/SideBar";
@@ -54,7 +52,7 @@ const Appointments = () => {
   ];
 
   return (
-    <div className="w-full h-screen flex ">
+    <div className="flex w-full h-screen ">
       <div className="flex flex-col justify-around  items-center w-full bg-[#292929] overflow-auto">
         <CreateAppointment />
         <AppointmentsTable clientTime={clientTime} />

@@ -5,9 +5,12 @@
 
 * {
   font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
+  direction:rtl
+
 }
 
-html {
-  scroll-behavior: smooth;
-  background-color: #292929;
+.chat-bubble::before {
+  display: none;
 }
+

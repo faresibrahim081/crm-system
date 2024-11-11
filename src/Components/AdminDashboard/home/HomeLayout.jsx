@@ -1,7 +1,7 @@
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import bgImg from "../../../assets/Media/bg.png";
 import charts from "../../../assets/Media/test.png";
-import stars from "../../../assets/Media/Frame 2095584759.png";
+import stars from "../../../assets/Media/Frame 2095584759 (1).png";
 
 function HomeLayout() {
   return (
@@ -11,7 +11,7 @@ function HomeLayout() {
         style={{ backgroundImage: `url(${bgImg})` }}
         className="h-[65vh] md:h-[70vh] px-10 w-full bg-center rounded-md bg-cover flex items-center bg-no-repeat relative capitalize overflow-hidden"
       >
-        <div className="p-0 m-0 flex gap-10 mx-auto">
+        <div className="flex gap-10 p-0 m-0 mx-auto">
           {/* Chart image - visible on larger screens */}
           <div className="flex-1 ">
             <img
@@ -22,7 +22,7 @@ function HomeLayout() {
           </div>
 
           {/* Content container - text and action buttons */}
-          <div className="flex-1 text-center lg:text-right flex flex-col items-center lg:items-end gap-5">
+          <div className="flex flex-col items-center flex-1 gap-5 text-center lg:text-right lg:items-end">
             {/* Heading with Arabic text and inline CRM abbreviation */}
             <h1 className="text-2xl lg:text-6xl">
               قم بتحسين عملك <br />
@@ -31,11 +31,11 @@ function HomeLayout() {
             </h1>
 
             {/* Description paragraph */}
-            <p className="text-gray-400 text-xs lg:text-xl">
-              يساعد ZBOOMA CRM الشركات على تطوير الأعمال <br />
-              باستخدام التكنولوجيا والميزات التي تجعل الأمر أسهل
-              <br />
-              للمستخدمين.
+            <p className="text-xs text-gray-400 lg:text-xl">
+              ZBOOMA CRM <br />
+              يساعد الشركات على تطويير الأعمال <br />
+              باستخدام التطنولوجيا والميزات التي تجعل الأمر سهلا <br />
+              للمستخدمين
             </p>
 
             {/* Action buttons container */}
@@ -43,7 +43,7 @@ function HomeLayout() {
               {/* Free trial button */}
               <a
                 href="#"
-                className="rounded-full w-[120px] flex items-center gap-2 bg-white shadow-sm py-2 px-4 h-14"
+                className="rounded-full w-[120px] flex items-center gap-2 bg-[#292929] text-white    px-4 h-14 hover:bg-[#0A8F0A] duration-300"
               >
                 تجربة مجانية
               </a>
@@ -51,7 +51,7 @@ function HomeLayout() {
               {/* Try now button with arrow icon */}
               <a
                 href="#"
-                className="rounded-full w-[120px] flex items-center gap-2 bg-[#00FFA9] shadow-sm py-2 px-4 h-14"
+                className="rounded-full w-[120px] flex items-center gap-2 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4 h-14"
               >
                 <FaLongArrowAltLeft /> <span>جرب الان</span>
               </a>
