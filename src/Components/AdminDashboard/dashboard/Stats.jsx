@@ -30,7 +30,7 @@ const DashboardHead = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center md:flex-row ">
+    <div className="flex flex-col items-center justify-center md:flex-row rounded-">
       {stats.map((stat, index) => (
         <div
           key={index}

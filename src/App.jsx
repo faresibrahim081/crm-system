@@ -5,14 +5,16 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Appointments from "./Pages/AdminPages/AppointmentsPage";
 import CustomerPage from "./Pages/AdminPages/CustomersPage";
 import TicketsPage from "./Pages/AdminPages/TicketsPage";
+import AdminDashboardPage from "./Pages/AdminPages/AdminDashboardPage";
 function App() {
   return (
     <div className="App ">
       {/* <Appointments /> */}
       {/* <HomePage/> */}
       {/* <AdminSignINPage /> */}
-      {/* <CustomerPage /> */}
-      <TicketsPage />
+      <CustomerPage />
+      {/* <TicketsPage /> */}
+      {/* <AdminDashboardPage /> */}
     </div>
   );
 }
