@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/Media/logo.png";
-import logo1 from "../assets/Media/logo (2).png";
+import logo1 from "../../../assets/Media/logo (2).png";
 import { LuHome } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa";
 import { FaRegNoteSticky } from "react-icons/fa6";

@@ -1,6 +1,6 @@
-import CreateAppointment from "../Components/AdminDashboard/Appointments/CreateAppointment";
-import AppointmentsTable from "../Components/AdminDashboard/Appointments/AppointmentsTable";
-import SideBar from "../Components/SideBar";
+import CreateAppointment from "../../Components/AdminDashboard/Appointments/CreateAppointment";
+import AppointmentsTable from "../../Components/AdminDashboard/Appointments/AppointmentsTable";
+import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
 
 const Appointments = () => {
   const clientTime = [

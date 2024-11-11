@@ -3,13 +3,75 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 
 const initialData = [
   {
-    id: "#156",
-    createdAt: "2024-10-30T10:00:00Z",
-    name: "John Doe",
-    website: "example.com",
-    email: "john@example.com",
+    id: "#157",
+    createdAt: "2024-10-31T14:15:00Z",
+    name: "Jane Smith",
+    website: "janesmith.com",
+    email: "jane@janesmith.com",
   },
-  // Additional data entries here...
+  {
+    id: "#158",
+    createdAt: "2024-11-01T09:30:00Z",
+    name: "Alice Johnson",
+    website: "alicejohnson.dev",
+    email: "alice@alicejohnson.dev",
+  },
+  {
+    id: "#159",
+    createdAt: "2024-11-02T11:45:00Z",
+    name: "Bob Williams",
+    website: "bobwilliams.com",
+    email: "bob@bobwilliams.com",
+  },
+  {
+    id: "#160",
+    createdAt: "2024-11-03T16:00:00Z",
+    name: "Chris Brown",
+    website: "chrisbrown.io",
+    email: "chris@chrisbrown.io",
+  },
+  {
+    id: "#161",
+    createdAt: "2024-11-04T08:30:00Z",
+    name: "Diana Garcia",
+    website: "dianagarcia.com",
+    email: "diana@dianagarcia.com",
+  },
+  {
+    id: "#162",
+    createdAt: "2024-11-05T13:20:00Z",
+    name: "Edward Martinez",
+    website: "edwardmartinez.dev",
+    email: "edward@edwardmartinez.dev",
+  },
+  {
+    id: "#163",
+    createdAt: "2024-11-06T07:50:00Z",
+    name: "Fiona Lee",
+    website: "fionalee.com",
+    email: "fiona@fionalee.com",
+  },
+  {
+    id: "#164",
+    createdAt: "2024-11-07T15:25:00Z",
+    name: "George Adams",
+    website: "georgeadams.io",
+    email: "george@georgeadams.io",
+  },
+  {
+    id: "#165",
+    createdAt: "2024-11-08T11:10:00Z",
+    name: "Hannah Wilson",
+    website: "hannahwilson.dev",
+    email: "hannah@hannahwilson.dev",
+  },
+  {
+    id: "#166",
+    createdAt: "2024-11-09T17:05:00Z",
+    name: "Ian Clark",
+    website: "ianclark.com",
+    email: "ian@ianclark.com",
+  },
 ];
 
 const Table = ({ searchId, sortOrder }) => {
@@ -30,7 +92,7 @@ const Table = ({ searchId, sortOrder }) => {
   }
 
   return (
-    <div className="bg-[rgb(41,41,41)] text-white min-h-screen p-4 flex-grow">
+    <div className="bg-[rgb(41,41,41)] text-white min-h-screen p-4 flex-grow ">
       <div className="max-w-full p-4 mx-auto overflow-x-auto bg-black rounded-lg shadow-md">
         <table className="w-full text-base border-collapse md:text-sm">
           <thead>
