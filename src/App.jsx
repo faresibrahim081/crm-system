@@ -8,11 +8,11 @@ import TicketsPage from "./Pages/AdminPages/TicketsPage";
 function App() {
   return (
     <div className="App ">
-      <Appointments />
+      {/* <Appointments /> */}
       {/* <HomePage/> */}
       {/* <AdminSignINPage /> */}
       {/* <CustomerPage /> */}
-      {/* <TicketsPage /> */}
+      <TicketsPage />
     </div>
   );
 }
