@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SearchFilter from "../../Components/AdminDashboard/Utilities/SearchFilter";
-import ListCustomers from "../../Components/AdminDashboard/customers/ListCustomers";
 import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
+import CustomersTable from "../../Components/AdminDashboard/customers/CustomersTable";
 
 const ListUsers = () => {
   const [searchId, setSearchId] = useState("");
@@ -12,7 +12,8 @@ const ListUsers = () => {
       <div className="flex-grow bg-[#292929] p-4 overflow-hidden">
         {/* Added margin-right to account for the sidebar */}
         <SearchFilter setSearchId={setSearchId} setSortOrder={setSortOrder} />
-        <ListCustomers searchId={searchId} sortOrder={sortOrder} />
+        {/* <ListCustomers searchId={searchId} sortOrder={sortOrder} /> */}
+        <CustomersTable />
       </div>
       <SideBar /> {/* Sidebar now on the right */}
     </div>
