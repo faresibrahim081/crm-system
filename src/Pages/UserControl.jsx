@@ -1,9 +1,9 @@
 import React from 'react'
 import Card from './Card'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ProjectDetails from './ProjectDetails';
-import YourTime from './YourTime'
-import Chat from "../Pages/Chat"
+import ProjectDetails from '../Components/UserDshboard/ProjectDetails';
+import YourTime from '../Components/UserDshboard/YourTime'
+import Chat from "./Chat"
 function UserControl() {
     const cards = [
         { title: 'البريد الإلكتروني', content: 'ahmed@email.com', icon: <AccountCircleIcon className="w-6 h-6" /> },

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Chat from '../Pages/Chat';
-import { filterAndSortData } from '../Components/FilterAndSort'; // Optional: if you have a utility function for sorting and filtering
-import SearchAndSort from '../Components/SearchAndSelect';
+import { filterAndSortData } from '../Components/AdminChatssCom/FilterAndSort'; 
+import SearchAndSort from '../Components/AdminChatssCom/SearchAndSelect';
 
 function AdminChhatts() {
-  const [searchTerm, setSearchTerm] = useState(""); // State for search term
-  const [sortOrder, setSortOrder] = useState(""); // State for sorting option
+  const [searchTerm, setSearchTerm] = useState(""); 
+  const [sortOrder, setSortOrder] = useState(""); 
 
   const Data = [
     { id: "#156", customer: "John Doe", email: "john@example.com" },
@@ -17,7 +17,7 @@ function AdminChhatts() {
     { id: "#009", customer: "Jane", email: "jane6@sample.com" }
   ];
 
-  // Get the sorted and filtered data using the utility function or inline logic
+
   const sortedData = filterAndSortData(Data, searchTerm, sortOrder);
 
   const tableStyle = { width: '100%', borderCollapse: 'collapse' };
@@ -26,7 +26,6 @@ function AdminChhatts() {
     <div className="AdminChats bg-[#292929] text-[white] h-screen px-[30px] py-[40px]">
       <h3>المحادثات</h3>
 
-      {/* Use the SearchAndSort component */}
       <SearchAndSort
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
