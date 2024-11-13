@@ -1,15 +1,20 @@
-import React from "react";
-import Tickets from "../../Components/AdminDashboard/tickets/Tickets";
+import { div } from "framer-motion/client";
 import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
+import SearchFilter from "../../Components/AdminDashboard/Utilities/SearchFilter";
+import Tickets from "../../Components/AdminDashboard/tickets/Tickets"
+const TicketPage = () => {
 
-const TicketsPage = () => {
-  return (
-    <div className="flex w-full h-screen ">
-      <div className="flex flex-col justify-around  items-center w-full bg-[#292929] overflow-auto">
-        <Tickets />
-      </div>
-      <SideBar />
-    </div>
-  );
+
+    return(
+        <div className="flex h-screen bg-[#292929]">
+         <div className=" flex-grow">      
+            <SearchFilter/>
+            <Tickets/>
+
+         </div>
+            <SideBar/>
+        </div>
+
+    );
 };
-export default TicketsPage;
+export default TicketPage;
