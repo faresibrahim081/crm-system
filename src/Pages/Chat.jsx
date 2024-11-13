@@ -34,9 +34,9 @@ const ChatModal = () => {
     <>
       <button
         onClick={handleOpen}
-        className="px-4 py-2 text-white bg-purple-600 rounded hover:bg-purple-700 dark:hover:bg-purple-500"
+        className="px-4 py-2 text-white bg-[#0F430B] rounded"
       >
-        Open Chat
+        Send Message
       </button>
 
       {isOpen && (

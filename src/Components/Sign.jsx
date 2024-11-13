@@ -6,7 +6,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import { Link } from "react-router-dom";
 import axios from "axios";
-function Sign() {
+function Sign () {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   async function submit(e) {

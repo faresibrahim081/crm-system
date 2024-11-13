@@ -3,6 +3,7 @@ import Card from './Card'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ProjectDetails from './ProjectDetails';
 import YourTime from './YourTime'
+import Chat from "../Pages/Chat"
 function UserControl() {
     const cards = [
         { title: 'البريد الإلكتروني', content: 'ahmed@email.com', icon: <AccountCircleIcon className="w-6 h-6" /> },
@@ -73,16 +74,7 @@ function UserControl() {
                                     <td >{item.content}</td>
                                     <td >{item.email}</td>
                                     <td>
-                                        <button className="btn bg-[#00FFA9] p-2 rounded" onClick={()=>document.getElementById('my_modal_2').showModal()}>تحدث </button>
-                                        <dialog id="my_modal_2" className="modal">
-                                        <div className="modal-box">
-                                            <h3 className="font-bold text-lg">Hello!</h3>
-                                            <p className="py-4">Press ESC key or click outside to close</p>
-                                        </div>
-                                        <form method="dialog" className="modal-backdrop">
-                                            <button>close</button>
-                                        </form>
-                                        </dialog>
+                                                        <Chat/>
                                     </td>
                                 </tr>
                             ))}
