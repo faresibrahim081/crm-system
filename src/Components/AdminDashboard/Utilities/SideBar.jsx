@@ -7,22 +7,19 @@ import { IoTimeOutline } from "react-icons/io5";
 import { CiChat1 } from "react-icons/ci";
 import { PiSignOut } from "react-icons/pi";
 import { FiMenu } from "react-icons/fi"; // Menu icon for mobile
+import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false); // Sidebar open/close state
   const [activeLink, setActiveLink] = useState("لوحة التحكم");
 
   const links = [
-    { title: "لوحة التحكم", icon: LuHome },
-    { title: "العملاء", icon: FaRegUser },
-    { title: "الملاحظات", icon: FaRegNoteSticky },
-    { title: "المواعيد", icon: IoTimeOutline },
-    { title: "المحادثات", icon: CiChat1 },
+    { title: "لوحة التحكم", to: "/admindashboard", icon: LuHome },
+    { title: "العملاء", to: "/customers", icon: FaRegUser },
+    { title: "الملاحظات", to: "/tickets", icon: FaRegNoteSticky },
+    { title: "المواعيد", to: "/appointments", icon: IoTimeOutline },
+    { title: "المحادثات", to: "/chats", icon: CiChat1 },
   ];
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
 
   return (
     <>
@@ -51,18 +48,17 @@ const SideBar = () => {
             {links.map((link, i) => (
               <ul key={i} className="w-full space-y-1 text-right">
                 <li>
-                  <a
-                    href="#"
-                    className={`flex items-center justify-end gap-2 rounded-lg px-4 py-3 text-sm text-white font-semibold ${
-                      activeLink === link.title
-                        ? "bg-[#00c853] text-[#016643]"
-                        : ""
-                    }`}
-                    onClick={() => handleLinkClick(link.title)}
+                  <NavLink
+                    to={link.to}
+                    className={({ isActive }) =>
+                      `flex items-center justify-end gap-2 rounded-lg px-4 py-3 text-sm font-semibold ${
+                        isActive ? "bg-[#00c853] text-[#016643]" : "text-white"
+                      }`
+                    }
                   >
                     {link.title}
                     <link.icon className="ml-2 text-xl" />
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             ))}

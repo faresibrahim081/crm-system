@@ -2,7 +2,7 @@ import CreateAppointment from "../../Components/AdminDashboard/Appointments/Crea
 import AppointmentsTable from "../../Components/AdminDashboard/Appointments/AppointmentsTable";
 import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
 
-const Appointments = () => {
+const AppointmentsPage = () => {
   const clientTime = [
     {
       sender: "أحمد محمد",
@@ -62,4 +62,4 @@ const Appointments = () => {
   );
 };
 
-export default Appointments;
+export default AppointmentsPage;
