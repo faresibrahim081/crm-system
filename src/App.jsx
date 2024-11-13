@@ -10,10 +10,10 @@ import AdminDashboardPage from "./Pages/AdminPages/AdminDashboardPage";
 function App() {
   return (
     <div className="App ">
-      {/* <Appointments /> */}
+      <Appointments />
       {/* <HomePage/> */}
       {/* <AdminSignINPage /> */}
-      <CustomerPage />
+      {/* <CustomerPage /> */}
       {/* <TicketsPage /> */}
       {/* <AdminDashboardPage /> */}
     </div>
