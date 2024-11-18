@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SearchFilter from "../../Components/AdminDashboard/Utilities/SearchFilter";
 import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
-import AdminTableChat from "../../Components/UserDashboard/AdminTableChat";
+import AdminTableChat from "../../Components/AdminDashboard/chats/AdminTableChat";
 
 const AdminChatPage = () => {
   const [searchId, setSearchId] = useState("");

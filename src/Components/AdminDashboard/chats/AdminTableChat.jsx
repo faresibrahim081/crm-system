@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ChatModal from "../../Components/AdminDashboard/chats/ChatModal";
+import ChatModal from "./ChatModal";
 
 const initialData = [
   {
