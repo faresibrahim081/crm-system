@@ -1,64 +1,62 @@
 import React from "react";
-import Card from "../../Components/UserDashboard/Card";
-import { MdAccountCircle } from "react-icons/md";
-import ProjectDetails from "../../Components/UserDashboard/ProjectDetails";
-import YourTime from "../../Components/UserDashboard/YourTime";
-import ChatModal from "../../Components/AdminDashboard/chats/ChatModal";
+import Card from "./Card";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ProjectDetails from "../Components/UserDshboard/ProjectDetails";
+import YourTime from "../Components/UserDshboard/YourTime";
+import Chat from "./Chat";
 function UserControl() {
   const cards = [
     {
       title: "البريد الإلكتروني",
       content: "ahmed@email.com",
-      icon: (
-        <MdAccountCircle className="w-20 text-black bg-green-800 rounded-full h-25" />
-      ),
+      icon: <AccountCircleIcon className="w-6 h-6" />,
     },
     {
-      title: " تاريخ الانشاء",
-      content: "24-11-2024",
-      icon: <MdAccountCircle className="w-6 h-6" />,
+      title: "البريد الإلكتروني",
+      content: "ahmed@email.com",
+      icon: <AccountCircleIcon className="w-6 h-6" />,
     },
     {
       title: "رابط الموقع",
       content: "ahmed.com",
-      icon: <MdAccountCircle className="w-6 h-6" />,
+      icon: <AccountCircleIcon className="w-6 h-6" />,
     },
     {
       title: "العنوان",
       content: "شارع احمد الشرقي المتقاطع من شارع احمد الشرقي...",
-      icon: <MdAccountCircle className="w-6 h-6" />,
+      icon: <AccountCircleIcon className="w-6 h-6" />,
     },
   ];
   const detail = [
     {
       title: "اداره الحساب",
       content: "مكتمل",
-      icon: <MdAccountCircle className="w-6 h-6" />,
+      icon: <AccountCircleIcon className="w-6 h-6" />,
     },
     {
       title: " التصميم",
       content: "قيد التنفيذ",
-      icon: <MdAccountCircle className="w-6 h-6" />,
+      icon: <AccountCircleIcon className="w-6 h-6" />,
     },
     {
       title: " البرمجه",
       content: "لم يتم البدء",
-      icon: <MdAccountCircle className="w-6 h-6" />,
+      icon: <AccountCircleIcon className="w-6 h-6" />,
     },
   ];
   const Time = [
     { day: "السبت" },
-    { day: "الاحد" },
-    { day: "الاثنين" },
-    { day: "الثلاثاء" },
-    { day: "الاربعاء" },
-    { day: "الخميس" },
+    { day: "السبت" },
+    { day: "السبت" },
+    { day: "السبت" },
+    { day: "السبت" },
+    { day: "السبت" },
   ];
   const chat = [
-    { id: 1, content: "admin 1", email: "admin1@gmail.com" },
-    { id: 2, content: "admin 2", email: "admin2@gmail.com" },
-    { id: 3, content: "admin 3", email: "admin3@gmail.com" },
-    { id: 4, content: "admin 4", email: "admin4@gmail.com" },
+    { id: 1, content: "admin", email: "aaaa@gmail.com" },
+    { id: 2, content: "admin", email: "aaaa@gmail.com" },
+    { id: 3, content: "admin", email: "aaaa@gmail.com" },
+    { id: 4, content: "admin", email: "aaaa@gmail.com" },
   ];
   return (
     <div className="UserControl bg-[#292929] text-white p-10 ">
@@ -67,7 +65,7 @@ function UserControl() {
           <h3 className="text-[30px] mb-5">لوحه التحكم</h3>
           <p className="pr-4 text-[#959595]">مرحبا ....</p>
         </div>
-        <button className="text-[red]">تسجيل الخروج</button>
+        <h5 className="text-[red]">تسجيل الخروج</h5>
       </div>
       <div className="mt-8 mr-5 middle">
         <h5 className="mb-5">بياناتي</h5>
@@ -114,7 +112,7 @@ function UserControl() {
                   <td>{item.content}</td>
                   <td>{item.email}</td>
                   <td>
-                    <ChatModal />
+                    <Chat />
                   </td>
                 </tr>
               ))}
