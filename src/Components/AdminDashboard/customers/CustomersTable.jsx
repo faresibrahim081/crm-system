@@ -75,9 +75,9 @@ const Table = ({ searchId, sortOrder }) => {
 
   return (
     <div className="bg-[rgb(41,41,41)] text-white min-h-screen p-4 flex-grow flex-col lg:flex-row">
-      <div className="w-full p-4 mx-auto bg-black rounded-lg shadow-md">
-        <div className="hidden overflow-y-auto lg:block h-[72vh]">
-          <table className="w-full text-sm border-collapse">
+      <div className="w-full p-4 mx-auto bg-black rounded-lg  shadow-md">
+        <div className="hidden overflow-y-auto lg:block h-[72vh] ">
+          <table className="w-full text-sm border-collapse ">
             <thead className="sticky top-0 left-0">
               <tr className="hidden md:table-row">
                 <th className="p-3 text-center text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">

@@ -9,7 +9,8 @@ const AdminDashboardPage = () => {
         <Stats />
         <Graph />
       </div>
-      <SideBar />
+      <SideBar/>
+      
     </div>
   );
 };
