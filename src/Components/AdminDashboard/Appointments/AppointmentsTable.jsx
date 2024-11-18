@@ -2,9 +2,9 @@ import React from "react";
 
 const Appointments = ({ clientTime = [] }) => {
   return (
-    <div className="flex flex-col items-center justify-around w-full gap-5">
+    <div className="flex flex-col items-center justify-around w-full gap-5 " >
       <div className="flex items-center justify-end w-full pr-10">
-        <h1 className="text-2xl font-semibold text-white ">المواعيد</h1>
+        <h1 className="text-2xl font-semibold text-white 2xl:mr-3">المواعيد</h1>
       </div>
 
       {/* Grid container */}
@@ -12,7 +12,7 @@ const Appointments = ({ clientTime = [] }) => {
         {clientTime.map((item, index) => (
           <div
             key={index}
-            className="bg-[#1a1a1a] text-white rounded-2xl border border-[#00c853] h-[250px] flex flex-col justify-start "
+            className="bg-[#0D0D0D] text-white rounded-2xl border border-[#00c853] h-[250px] flex flex-col justify-start "
           >
             {/* Header */}
             <div className="text-right font-semibold text-lg mb-2 border-b border-[#00c853] pb-2 w-full flex items-center justify-end p-3">

@@ -10,7 +10,7 @@ const SearchFilter = ({ setSearchId, setSortOrder , title }) => {
   };
 
   return (
-    <div className="bg-[#292929] text-white p-4 rounded-lg shadow-md w-full">
+    <div className="bg-[#292929] text-white p-4 rounded-lg w-full">
       <h1 className="font-bold text-[24px] mb-5 text-right">{title}</h1>
       <div className="flex flex-col gap-4 md:flex-row md:items-center">
         {/* Sort Dropdown */}

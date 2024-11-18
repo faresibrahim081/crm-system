@@ -8,9 +8,8 @@ const CustomersPage = () => {
   const [sortOrder, setSortOrder] = useState("");
 
   return (
-    <div className="flex h-screen bg-gray-100">
-      <div className="flex-grow bg-[#292929] p-4 overflow-hidden">
-        {/* Added margin-right to account for the sidebar */}
+    <div className="flex h-screen w-full">
+      <div className="flex flex-col justify-around items-center w-full bg-[#292929] overflow-auto pt-4">
         <SearchFilter
           setSearchId={setSearchId}
           setSortOrder={setSortOrder}
@@ -18,7 +17,7 @@ const CustomersPage = () => {
         />
         <CustomersTable searchId={searchId} sortOrder={sortOrder} />
       </div>
-      <SideBar /> {/* Sidebar now on the right */}
+      <SideBar />
     </div>
   );
 };

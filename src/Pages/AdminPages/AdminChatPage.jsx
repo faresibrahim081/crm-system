@@ -18,7 +18,7 @@ const AdminChatPage = () => {
         />
         <AdminTableChat searchId={searchId} sortOrder={sortOrder} />
       </div>
-      <SideBar /> {/* Sidebar now on the right */}
+      <SideBar />
     </div>
   );
 };
