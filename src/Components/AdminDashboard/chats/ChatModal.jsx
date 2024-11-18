@@ -1,15 +1,14 @@
 import { useState } from "react";
-import "./Chat.css";
 
 const ChatModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
-      text: "It's over Anakin,\nI have the high ground.",
+      text: "هلا والله ومرحب بيك",
       isUser: false,
     },
     {
-      text: "You underestimate my power!",
+      text: "حياك الله ابو عبد العزيز شلونك",
       isUser: true,
     },
   ]);
@@ -34,9 +33,9 @@ const ChatModal = () => {
     <>
       <button
         onClick={handleOpen}
-        className="px-4 py-2 text-white bg-[#0F430B] rounded"
+        className="px-2 py-1 bg-[#0d3d2c] text-emerald-400 font-bold rounded-md hover:bg-emerald-400 hover:text-gray-900 transition duration-200"
       >
-        Send Message
+        أرسل
       </button>
 
       {isOpen && (

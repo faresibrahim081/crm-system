@@ -2,9 +2,9 @@ import React from "react";
 
 const Appointments = ({ clientTime = [] }) => {
   return (
-    <div className="flex flex-col gap-5 justify-around items-center w-full">
-      <div className="flex justify-end items-center w-full pr-10">
-        <h1 className="text-white font-semibold text-2xl ">المواعيد</h1>
+    <div className="flex flex-col items-center justify-around w-full gap-5">
+      <div className="flex items-center justify-end w-full pr-10">
+        <h1 className="text-2xl font-semibold text-white ">المواعيد</h1>
       </div>
 
       {/* Grid container */}
@@ -20,7 +20,7 @@ const Appointments = ({ clientTime = [] }) => {
             </div>
 
             {/* Content */}
-            <div className="text-right p-4 flex flex-col justify-start items-end">
+            <div className="flex flex-col items-end justify-start p-4 text-right">
               <p className="mb-2">
                 <span className="font-bold">مرسل من:</span> {item.sender}
               </p>

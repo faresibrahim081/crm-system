@@ -1,98 +1,65 @@
-import PropTypes from "prop-types";
-import { useState } from "react";
+import StatuesModal from "./StatuesModal";
+import { useState, useEffect } from "react";
 import EditCustomerModal from "./EditCustomerModal";
 import Delete from "./Delete";
-import StatuesModal from "./StatuesModal";
 
 const initialData = [
   {
-    id: "#156",
-    createdAt: "2024-10-30T10:00:00Z",
-    name: "محمد علي",
-    website: "example1.com",
-    email: "mohamed1@example.com",
+    id: "#101",
+    createdAt: "2024-09-15T10:00:00Z",
+    name: "أحمد إبراهيم",
+    website: "site1.com",
+    email: "ahmed@site1.com",
   },
   {
-    id: "#157",
-    createdAt: "2024-10-31T11:00:00Z",
-    name: "أحمد حسن",
-    website: "example2.com",
-    email: "ahmed@example.com",
+    id: "#102",
+    createdAt: "2024-10-12T10:00:00Z",
+    name: "سارة حسين",
+    website: "site2.com",
+    email: "sara@site2.com",
   },
   {
-    id: "#158",
-    createdAt: "2024-11-01T12:00:00Z",
-    name: "سارة إبراهيم",
-    website: "example3.com",
-    email: "sara@example.com",
+    id: "#103",
+    createdAt: "2024-08-25T10:00:00Z",
+    name: "خالد سمير",
+    website: "site3.com",
+    email: "khaled@site3.com",
   },
   {
-    id: "#159",
-    createdAt: "2024-11-02T13:00:00Z",
-    name: "تسنيم العجمي",
-    website: "example4.com",
-    email: "tasnim@example.com",
+    id: "#105",
+    createdAt: "2024-11-05T10:00:00Z",
+    name: "ليلى محمود",
+    website: "site4.com",
+    email: "laila@site4.com",
   },
   {
-    id: "#160",
-    createdAt: "2024-11-03T14:00:00Z",
-    name: "يوسف عبد الرحمن",
-    website: "example5.com",
-    email: "youssef@example.com",
-  },
-  {
-    id: "#161",
-    createdAt: "2024-11-04T15:00:00Z",
-    name: "خالد محمود",
-    website: "example6.com",
-    email: "khaled@example.com",
-  },
-  {
-    id: "#162",
-    createdAt: "2024-11-05T16:00:00Z",
-    name: "منى مصطفى",
-    website: "example7.com",
-    email: "mona@example.com",
-  },
-  {
-    id: "#163",
-    createdAt: "2024-11-06T17:00:00Z",
-    name: "فاطمة الزهراء",
-    website: "example8.com",
-    email: "fatma@example.com",
-  },
-  {
-    id: "#164",
-    createdAt: "2024-11-07T18:00:00Z",
-    name: "عبد الله أحمد",
-    website: "example9.com",
-    email: "abdallah@example.com",
-  },
-  {
-    id: "#165",
-    createdAt: "2024-11-08T19:00:00Z",
-    name: "لينا سعيد",
-    website: "example10.com",
-    email: "lina@example.com",
-  },
-  {
-    id: "#166",
-    createdAt: "2024-11-09T20:00:00Z",
-    name: "عمر محمد",
-    website: "example11.com",
-    email: "omar@example.com",
-  },
-  {
-    id: "#167",
-    createdAt: "2024-11-10T21:00:00Z",
-    name: "حنين عادل",
-    website: "example12.com",
-    email: "hanin@example.com",
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
   },
 ];
 
-const CustomersTable = () => {
+const Table = ({ searchId, sortOrder }) => {
   const [data, setData] = useState(initialData);
+
+  useEffect(() => {
+    if (searchId) {
+      setData(
+        initialData.filter((item) => item.id.toString().includes(searchId))
+      );
+    } else {
+      setData(initialData); // Reset data if searchId is cleared
+    }
+  }, [searchId, initialData]);
+
+  // Sort data
+  if (sortOrder === "asc") {
+    data.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sortOrder === "desc") {
+    data.sort((a, b) => b.name.localeCompare(a.name));
+  }
 
   const handleSave = (id, updatedCustomer) => {
     setData((prevData) =>
@@ -109,147 +76,100 @@ const CustomersTable = () => {
   return (
     <div className="bg-[rgb(41,41,41)] text-white min-h-screen p-4 flex-grow flex-col lg:flex-row">
       <div className="w-full p-4 mx-auto bg-black rounded-lg shadow-md">
-        {/* Table for large screens */}
         <div className="hidden overflow-y-auto lg:block h-[72vh]">
-          <table className="w-full text-sm border-collapse" dir="rtl">
+          <table className="w-full text-sm border-collapse">
             <thead className="sticky top-0 left-0">
-              <tr className="bg-[rgb(41,41,41)]">
-                <th className="px-4 py-3 border-b border-gray-700">
-                  الرمز التعريفي
+              <tr className="hidden md:table-row">
+                <th className="p-3 text-center text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
+                  الإجراء
                 </th>
-                <th className="px-4 py-3 text-center border-b border-gray-700">
-                  تاريخ الإنشاء
-                </th>
-                <th className="px-4 py-3 text-center border-b border-gray-700">
-                  العميل
-                </th>
-                <th className="px-4 py-3 border-b border-gray-700">
-                  الموقع الإلكتروني
-                </th>
-                <th className="px-4 py-3 text-center border-b border-gray-700">
-                  البريد الإلكتروني
-                </th>
-                <th className="px-4 py-3 text-center border-b border-gray-700">
+                <th className="p-3 text-center text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
                   الحالة
                 </th>
-                <th className="px-4 py-3 text-center border-b border-gray-700">
-                  الإجراء
+                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
+                  تاريخ الإنشاء
+                </th>
+                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
+                  الموقع الإلكتروني
+                </th>
+                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
+                  البريد الإلكتروني
+                </th>
+                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
+                  العميل
+                </th>
+                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
+                  ID
                 </th>
               </tr>
             </thead>
             <tbody>
-              {data.length > 0 ? (
-                data.map((customer) => (
-                  <tr key={customer.id} className="border-b border-gray-700">
-                    <td className="px-4 py-3 text-center border-gray-700">
-                      {customer.id}
-                    </td>
-                    <td className="px-4 py-3 border-gray-700">
-                      {customer.createdAt}
-                    </td>
-                    <td className="px-4 py-3 border-gray-700">
-                      {customer.name}
-                    </td>
-                    <td className="px-4 py-3 border-gray-700">
-                      {customer.website}
-                    </td>
-                    <td className="px-4 py-3 border-gray-700">
-                      {customer.email}
-                    </td>
-                    <td className="px-4 py-3 border-gray-700">
-                      <StatuesModal />
-                    </td>
+              {data.map((item) => (
+                <tr
+                  className="block w-full border-b border-gray-500 md:table-row md:border-none"
+                  key={item.id}
+                >
+                  <td
+                    className="p-3 text-center md:border-none"
+                    data-label="Action"
+                  >
                     <td className="px-4 py-3 border-gray-700">
                       <div className="flex justify-center gap-2">
+                        <Delete onDelete={() => handleDelete(item.id)} />
                         <EditCustomerModal
-                          customer={customer}
+                          customer={item}
                           onSave={(updatedData) =>
-                            handleSave(customer.id, updatedData)
+                            handleSave(item.id, updatedData)
                           }
                         />
-                        <Delete onDelete={() => handleDelete(customer.id)} />
                       </div>
                     </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="7" className="py-4 text-center">
-                    لا توجد نتائج
+                  </td>
+                  <td
+                    className="p-3 text-center md:border-none"
+                    data-label="Status"
+                  >
+                    <StatuesModal />
+                  </td>
+
+                  <td
+                    className="p-3 md:text-right md:border-none"
+                    data-label="Created At"
+                  >
+                    {item.createdAt}
+                  </td>
+                  <td
+                    className="p-3 md:text-right md:border-none"
+                    data-label="Website"
+                  >
+                    {item.website}
+                  </td>
+                  <td
+                    className="p-3 md:text-right md:border-none"
+                    data-label="Email"
+                  >
+                    {item.email}
+                  </td>
+                  <td
+                    className="p-3 md:text-right md:border-none"
+                    data-label="Customer"
+                  >
+                    {item.name}
+                  </td>
+                  <td
+                    className="p-3 md:text-right md:border-none"
+                    data-label="ID"
+                  >
+                    {item.id}
                   </td>
                 </tr>
-              )}
+              ))}
             </tbody>
           </table>
-        </div>
-
-        {/* Card layout for mobile */}
-        <div className="lg:hidden" dir="rtl">
-          {data.length > 0 ? (
-            data.map((customer) => (
-              <div
-                key={customer.id}
-                className="p-4 mb-4 bg-[rgb(41,41,41)] rounded-lg shadow-md"
-              >
-                <div className="flex justify-between ">
-                  <span className="font-bold">الرمز التعريفي:</span>
-                  <span>{customer.id}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-bold">تاريخ الإنشاء:</span>
-                  <span>{customer.createdAt}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-bold">العميل:</span>
-                  <span>{customer.name}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-bold">الموقع الإلكتروني:</span>
-                  <span>{customer.website}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-bold">البريد الإلكتروني:</span>
-                  <span>{customer.email}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-bold">الحالة:</span>
-                  <StatuesModal />
-                </div>
-                <div className="flex justify-between gap-2 mt-4">
-                  <EditCustomerModal
-                    customer={customer}
-                    onSave={(updatedData) =>
-                      handleSave(customer.id, updatedData)
-                    }
-                  />
-                  <Delete onDelete={() => handleDelete(customer.id)} />
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <p className="text-center">لا توجد نتائج</p>
-            </div>
-          )}
         </div>
       </div>
     </div>
   );
 };
 
-// Adding PropTypes validation
-CustomersTable.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      createdAt: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      website: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  onEdit: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
-
-export default CustomersTable;
+export default Table;

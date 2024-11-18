@@ -1,9 +1,9 @@
 import { useState } from "react";
 import SearchFilter from "../../Components/AdminDashboard/Utilities/SearchFilter";
 import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
-import CustomersTable from "../../Components/AdminDashboard/customers/CustomersTable";
+import AdminTableChat from "../../Components/UserDashboard/AdminTableChat";
 
-const CustomersPage = () => {
+const AdminChatPage = () => {
   const [searchId, setSearchId] = useState("");
   const [sortOrder, setSortOrder] = useState("");
 
@@ -14,13 +14,13 @@ const CustomersPage = () => {
         <SearchFilter
           setSearchId={setSearchId}
           setSortOrder={setSortOrder}
-          title="العملاء"
+          title="المحادثات"
         />
-        <CustomersTable searchId={searchId} sortOrder={sortOrder} />
+        <AdminTableChat searchId={searchId} sortOrder={sortOrder} />
       </div>
       <SideBar /> {/* Sidebar now on the right */}
     </div>
   );
 };
 
-export default CustomersPage;
+export default AdminChatPage;

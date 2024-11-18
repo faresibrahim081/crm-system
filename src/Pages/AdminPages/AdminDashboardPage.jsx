@@ -4,15 +4,12 @@ import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
 
 const AdminDashboardPage = () => {
   return (
-    <div className="flex justify-between bg-[#292929]">
-      <div className="w-full md:w-[70vw] flex flex-col justify-center gap-24 mx-auto text-right">
-        <h1 className="text-white font-semibold text-2xl">لوحة التحكم</h1>
+    <div className="flex h-screen bg-gray-100">
+      <div className="flex-grow bg-[#292929] p-4 overflow-hidden flex flex-col justify-around">
         <Stats />
         <Graph />
       </div>
-      <div className="">
-        <SideBar />
-      </div>
+      <SideBar />
     </div>
   );
 };

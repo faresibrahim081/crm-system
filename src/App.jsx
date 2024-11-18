@@ -4,8 +4,9 @@ import AdminSignINPage from "./Pages/AdminPages/AdminSignINPage";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import AppointmentsPage from "./Pages/AdminPages/AppointmentsPage";
 import CustomerPage from "./Pages/AdminPages/CustomersPage";
-import TicketsPage from "./Pages/AdminPages/TicketsPage";
+import AdminTicketsPage from "./Pages/AdminPages/AdminTicketsPage";
 import AdminDashboardPage from "./Pages/AdminPages/AdminDashboardPage";
+import AdminChatPage from "./Pages/AdminPages/AdminChatPage";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/signin" element={<AdminSignINPage />} />
         <Route path="/appointments" element={<AppointmentsPage />} />
         <Route path="/customers" element={<CustomerPage />} />
-        <Route path="/tickets" element={<TicketsPage />} />
+        <Route path="/tickets" element={<AdminTicketsPage />} />
+        <Route path="/chat" element={<AdminChatPage />} />
       </Routes>
     </div>
   );

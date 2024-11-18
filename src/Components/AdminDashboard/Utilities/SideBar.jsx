@@ -18,7 +18,7 @@ const SideBar = () => {
     { title: "العملاء", to: "/customers", icon: FaRegUser },
     { title: "الملاحظات", to: "/tickets", icon: FaRegNoteSticky },
     { title: "المواعيد", to: "/appointments", icon: IoTimeOutline },
-    { title: "المحادثات", to: "/chats", icon: CiChat1 },
+    { title: "المحادثات", to: "/chat", icon: CiChat1 },
   ];
 
   return (
