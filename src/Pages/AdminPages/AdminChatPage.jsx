@@ -8,8 +8,8 @@ const AdminChatPage = () => {
   const [sortOrder, setSortOrder] = useState("");
 
   return (
-    <div className="flex h-screen bg-gray-100">
-      <div className="flex-grow bg-[#292929] p-4 overflow-hidden">
+    <div className="flex w-full h-screen ">
+      <div className="flex flex-col justify-around  items-center w-full bg-[#292929] overflow-auto">
         {/* Added margin-right to account for the sidebar */}
         <SearchFilter
           setSearchId={setSearchId}

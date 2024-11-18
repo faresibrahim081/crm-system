@@ -39,6 +39,90 @@ const initialData = [
     website: "site5.com",
     email: "yousef@site5.com",
   },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
 ];
 
 const Table = ({ searchId, sortOrder }) => {
@@ -74,94 +158,61 @@ const Table = ({ searchId, sortOrder }) => {
   };
 
   return (
-    <div className="bg-[rgb(41,41,41)] text-white min-h-screen p-4 flex-grow flex-col lg:flex-row">
-      <div className="w-full p-4 mx-auto bg-black rounded-lg shadow-md">
-        <div className="hidden overflow-y-auto lg:block h-[72vh]">
+    <div className="w-full mx-auto bg-[#292929] text-white p-4 h-full">
+      <div className="w-full mx-auto bg-black rounded-lg shadow-md">
+        {/* Add padding for breathing space */}
+        <div className="overflow-auto rounded-lg h-[75vh]">
           <table className="w-full text-sm border-collapse">
-            <thead className="sticky top-0 left-0">
-              <tr className="hidden md:table-row">
-                <th className="p-3 text-center text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
+            <thead className="sticky top-0 bg-[#333] shadow-md">
+              <tr>
+                <th className="p-4 text-center text-gray-300 border-b border-gray-500">
                   الإجراء
                 </th>
-                <th className="p-3 text-center text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
+                <th className="p-4 text-center text-gray-300 border-b border-gray-500">
                   الحالة
                 </th>
-                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
+                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
                   تاريخ الإنشاء
                 </th>
-                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
+                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
                   الموقع الإلكتروني
                 </th>
-                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
+                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
                   البريد الإلكتروني
                 </th>
-                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
+                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
                   العميل
                 </th>
-                <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
-                  ID
+                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
+                  الرمز التعريفي
                 </th>
               </tr>
             </thead>
             <tbody>
               {data.map((item) => (
                 <tr
-                  className="block w-full border-b border-gray-500 md:table-row md:border-none"
                   key={item.id}
+                  className="border-b border-gray-500 hover:bg-[#444]"
                 >
-                  <td
-                    className="p-3 text-center md:border-none"
-                    data-label="Action"
-                  >
-                    <td className="px-4 py-3 border-gray-700">
-                      <div className="flex justify-center gap-2">
-                        <Delete onDelete={() => handleDelete(item.id)} />
-                        <EditCustomerModal
-                          customer={item}
-                          onSave={(updatedData) =>
-                            handleSave(item.id, updatedData)
-                          }
-                        />
-                      </div>
-                    </td>
+                  <td className="p-4 text-center">
+                    <div className="flex justify-center gap-2">
+                      <Delete onDelete={() => handleDelete(item.id)} />
+                      <EditCustomerModal
+                        customer={item}
+                        onSave={(updatedData) =>
+                          handleSave(item.id, updatedData)
+                        }
+                      />
+                    </div>
                   </td>
-                  <td
-                    className="p-3 text-center md:border-none"
-                    data-label="Status"
-                  >
+                  <td className="p-4 text-center">
                     <StatuesModal />
                   </td>
-
-                  <td
-                    className="p-3 md:text-right md:border-none"
-                    data-label="Created At"
-                  >
-                    {item.createdAt}
-                  </td>
-                  <td
-                    className="p-3 md:text-right md:border-none"
-                    data-label="Website"
-                  >
-                    {item.website}
-                  </td>
-                  <td
-                    className="p-3 md:text-right md:border-none"
-                    data-label="Email"
-                  >
-                    {item.email}
-                  </td>
-                  <td
-                    className="p-3 md:text-right md:border-none"
-                    data-label="Customer"
-                  >
-                    {item.name}
-                  </td>
-                  <td
-                    className="p-3 md:text-right md:border-none"
-                    data-label="ID"
-                  >
-                    {item.id}
-                  </td>
+                  <td className="p-4 text-right">{item.createdAt}</td>
+                  <td className="p-4 text-right">{item.website}</td>
+                  <td className="p-4 text-right">{item.email}</td>
+                  <td className="p-4 text-right">{item.name}</td>
+                  <td className="p-4 text-right">{item.id}</td>
                 </tr>
               ))}
             </tbody>
