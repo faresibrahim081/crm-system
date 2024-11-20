@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ChatModal from "../../Components/AdminDashboard/chats/ChatModal";
+import ChatModal from "./ChatModal";
 
 const initialData = [
   {
@@ -29,6 +29,41 @@ const initialData = [
     name: "ليلى محمود",
     website: "site4.com",
     email: "laila@site4.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
+  },
+  {
+    id: "#104",
+    createdAt: "2024-07-30T10:00:00Z",
+    name: "يوسف علي",
+    website: "site5.com",
+    email: "yousef@site5.com",
   },
   {
     id: "#104",

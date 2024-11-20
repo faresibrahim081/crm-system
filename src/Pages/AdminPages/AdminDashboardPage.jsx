@@ -4,12 +4,13 @@ import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
 
 const AdminDashboardPage = () => {
   return (
-    <div className="flex h-screen bg-gray-100">
-      <div className="flex-grow bg-[#292929] p-4 overflow-hidden flex flex-col justify-around">
+    <div className="flex h-screen ">
+      <div className="flex flex-col justify-around px-5 w-full bg-[#292929] overflow-auto">
         <Stats />
         <Graph />
       </div>
-      <SideBar />
+      <SideBar/>
+      
     </div>
   );
 };

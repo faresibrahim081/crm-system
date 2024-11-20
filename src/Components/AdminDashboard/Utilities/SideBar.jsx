@@ -66,7 +66,7 @@ const SideBar = () => {
         </div>
 
         {/* Profile and Logout */}
-        <div className="sticky inset-x-0 bottom-0 border-t border-[#00c853] flex items-center justify-between p-4 mt-80">
+        <div className="sticky inset-x-0 bottom-0 border-t border-[#00c853] flex items-center justify-between p-4">
           <a
             href="#"
             className="flex items-center gap-2 bg-[#292929] hover:bg-[#333] text-white"

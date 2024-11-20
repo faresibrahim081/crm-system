@@ -10,7 +10,6 @@ const CustomersPage = () => {
   return (
     <div className="flex w-full h-screen ">
       <div className="flex flex-col justify-around  items-center w-full bg-[#292929] overflow-auto">
-        {/* Added margin-right to account for the sidebar */}
         <SearchFilter
           setSearchId={setSearchId}
           setSortOrder={setSortOrder}
@@ -18,7 +17,7 @@ const CustomersPage = () => {
         />
         <CustomersTable searchId={searchId} sortOrder={sortOrder} />
       </div>
-      <SideBar /> {/* Sidebar now on the right */}
+      <SideBar />
     </div>
   );
 };
