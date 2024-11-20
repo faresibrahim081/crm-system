@@ -1,7 +1,6 @@
-import React from "react";
 import HomePage from "./Pages/AdminPages/HomePage";
 import AdminSignINPage from "./Pages/AdminPages/AdminSignINPage";
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AppointmentsPage from "./Pages/AdminPages/AppointmentsPage";
 import CustomerPage from "./Pages/AdminPages/AdminCustomersPage";
 import AdminTicketsPage from "./Pages/AdminPages/AdminTicketsPage";

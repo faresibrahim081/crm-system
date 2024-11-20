@@ -1,13 +1,13 @@
-import React from 'react'
-
-function ProjectDetails({ title, icon, content }) {
-    return (
-        <div className='ProjectDetails  bg-black mb-5 rounded-2xl p-10'>
-            {icon}
-            <h4 className='mb-4'>{title} </h4>
-            <button className='p-2 bg-[#00FFA9] rounded'>{content}</button>
-        </div>
-    )
+function ProjectDetails({ title, icon, content, index }) {
+    const bgColors = ["bg-gray-500", "bg-yellow-600", "bg-green-500"];
+    const bgColor = bgColors[index % bgColors.length];
+  return (
+    <div className="flex flex-col gap-4 items-end bg-black rounded-2xl p-10">
+      <h3 className=" bg-green-600 p-4 rounded-full">{icon}</h3>
+      <h4 className="text-xl font-bold">{title} </h4>
+      <p className={`text-gray-200 p-2 rounded ${bgColor}`}>{content}</p>
+    </div>
+  );
 }
 
-export default ProjectDetails
+export default ProjectDetails;
