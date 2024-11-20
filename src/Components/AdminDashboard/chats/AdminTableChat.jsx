@@ -37,63 +37,8 @@ const initialData = [
     website: "site5.com",
     email: "yousef@site5.com",
   },
-  {
-    id: "#104",
-    createdAt: "2024-07-30T10:00:00Z",
-    name: "يوسف علي",
-    website: "site5.com",
-    email: "yousef@site5.com",
-  },
-  {
-    id: "#104",
-    createdAt: "2024-07-30T10:00:00Z",
-    name: "يوسف علي",
-    website: "site5.com",
-    email: "yousef@site5.com",
-  },
-  {
-    id: "#104",
-    createdAt: "2024-07-30T10:00:00Z",
-    name: "يوسف علي",
-    website: "site5.com",
-    email: "yousef@site5.com",
-  },
-  {
-    id: "#104",
-    createdAt: "2024-07-30T10:00:00Z",
-    name: "يوسف علي",
-    website: "site5.com",
-    email: "yousef@site5.com",
-  },
-  {
-    id: "#104",
-    createdAt: "2024-07-30T10:00:00Z",
-    name: "يوسف علي",
-    website: "site5.com",
-    email: "yousef@site5.com",
-  },
-  {
-    id: "#104",
-    createdAt: "2024-07-30T10:00:00Z",
-    name: "يوسف علي",
-    website: "site5.com",
-    email: "yousef@site5.com",
-  },
-  {
-    id: "#104",
-    createdAt: "2024-07-30T10:00:00Z",
-    name: "يوسف علي",
-    website: "site5.com",
-    email: "yousef@site5.com",
-  },
-  {
-    id: "#104",
-    createdAt: "2024-07-30T10:00:00Z",
-    name: "يوسف علي",
-    website: "site5.com",
-    email: "yousef@site5.com",
-  },
 ];
+
 function AdminTableChat({ searchId, sortOrder }) {
   const [data, setData] = useState(initialData);
 
@@ -103,9 +48,9 @@ function AdminTableChat({ searchId, sortOrder }) {
         initialData.filter((item) => item.id.toString().includes(searchId))
       );
     } else {
-      setData(initialData); // Reset data if searchId is cleared
+      setData(initialData);
     }
-  }, [searchId, initialData]);
+  }, [searchId]);
 
   // Sort data
   if (sortOrder === "asc") {
@@ -116,9 +61,9 @@ function AdminTableChat({ searchId, sortOrder }) {
 
   return (
     <div className="w-full mx-auto bg-[#292929] text-white p-4 h-full">
-      <div className="w-full mx-auto bg-black rounded-lg shadow-md">
-        {/* Add padding for breathing space */}
-        <div className="overflow-auto rounded-lg h-[75vh]">
+      <div className="w-full mx-auto md:bg-black rounded-lg shadow-md">
+        {/* Table layout for large screens */}
+        <div className="overflow-auto rounded-lg h-[75vh] hidden md:block">
           <table className="w-full text-sm border-collapse">
             <thead className="sticky top-0 bg-[#333] shadow-md">
               <tr>
@@ -148,31 +93,52 @@ function AdminTableChat({ searchId, sortOrder }) {
                   className="border-b border-gray-500 hover:bg-[#444]"
                   key={item.id}
                 >
-                  <td
-                    className="p-3 text-center md:border-none"
-                    data-label="Action"
-                  >
+                  <td className="p-4 text-center">
                     <ChatModal />
                   </td>
-                  <td className="p-4 text-center" data-label="Created At">
-                    {item.createdAt}
-                  </td>
-                  <td className="p-4 text-center" data-label="Website">
-                    {item.website}
-                  </td>
-                  <td className="p-4 text-center" data-label="Email">
-                    {item.email}
-                  </td>
-                  <td className="p-4 text-center" data-label="Customer">
-                    {item.name}
-                  </td>
-                  <td className="p-4 text-center" data-label="ID">
-                    {item.id}
-                  </td>
+                  <td className="p-4 text-center">{item.createdAt}</td>
+                  <td className="p-4 text-center">{item.website}</td>
+                  <td className="p-4 text-center">{item.email}</td>
+                  <td className="p-4 text-center">{item.name}</td>
+                  <td className="p-4 text-center">{item.id}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Card layout for mobile */}
+        <div className="md:hidden" dir="rtl">
+          {data.map((item) => (
+            <div
+              key={item.id}
+              className="p-4 mb-4 bg-[#333] rounded-lg shadow-md"
+            >
+              <div className="flex justify-between">
+                <span className="font-bold">الرمز التعريفي:</span>
+                <span>{item.id}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-bold">العميل:</span>
+                <span>{item.name}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-bold">البريد الإلكتروني:</span>
+                <span>{item.email}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-bold">الموقع الإلكتروني:</span>
+                <span>{item.website}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-bold">تاريخ الإنشاء:</span>
+                <span>{item.createdAt}</span>
+              </div>
+              <div className="flex justify-center mt-4">
+                <ChatModal />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
