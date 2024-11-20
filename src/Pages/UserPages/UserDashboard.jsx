@@ -5,24 +5,24 @@ import ChatModal from "../../Components/AdminDashboard/chats/ChatModal";
 import { FaCode } from "react-icons/fa";
 import { SiAffinitydesigner } from "react-icons/si";
 import { MdOutlineManageAccounts } from "react-icons/md";
+import TicketsModal from "../../Components/AdminDashboard/tickets/TicketsModal";
 function UserDashboard() {
-
   const detail = [
     {
       title: " البرمجه",
       content: "لم يتم البدء",
-      icon: <FaCode className="w-6 text-black h-6" />,
+      icon: <FaCode className="w-6 h-6 text-black" />,
     },
 
     {
       title: " التصميم",
       content: "قيد التنفيذ",
-      icon: <SiAffinitydesigner className="w-6 text-black h-6" />,
+      icon: <SiAffinitydesigner className="w-6 h-6 text-black" />,
     },
     {
       title: "اداره الحساب",
       content: "مكتمل",
-      icon: <MdOutlineManageAccounts className="w-6 text-black h-6" />,
+      icon: <MdOutlineManageAccounts className="w-6 h-6 text-black" />,
     },
   ];
   const Time = [
@@ -50,7 +50,7 @@ function UserDashboard() {
       </div>
       <div className="mt-8 mr-5">
         <h5 className="mb-5 text-xl">بياناتي</h5>
-          <Card />
+        <Card />
       </div>
       <div className="mt-8 mr-5">
         <h5 className="mb-5 text-xl">تفاصيل المشروع</h5>
@@ -76,6 +76,9 @@ function UserDashboard() {
                   أرسل رسالة
                 </th>
                 <th className="p-4 text-center text-gray-300 border-b border-gray-500">
+                  أرسل ملاحظة
+                </th>
+                <th className="p-4 text-center text-gray-300 border-b border-gray-500">
                   البريد الإلكتروني
                 </th>
                 <th className="p-4 text-center text-gray-300 border-b border-gray-500">
@@ -91,6 +94,9 @@ function UserDashboard() {
                 >
                   <td className="p-4 text-center">
                     <ChatModal />
+                  </td>
+                  <td className="p-4 text-center">
+                    <TicketsModal />
                   </td>
                   <td className="p-4 text-center">{item.email}</td>
                   <td className="p-4 text-center">{item.content}</td>

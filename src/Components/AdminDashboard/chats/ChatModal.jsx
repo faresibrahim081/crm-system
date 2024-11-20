@@ -35,7 +35,7 @@ const ChatModal = () => {
         onClick={handleOpen}
         className="px-10 py-1 bg-[#0d3d2c] text-emerald-400 font-bold rounded-md hover:bg-emerald-400 hover:text-gray-900 transition duration-200"
       >
-        أرسل
+        أرسل رسالة{" "}
       </button>
 
       {isOpen && (
@@ -65,7 +65,7 @@ const ChatModal = () => {
                 <textarea
                   value={newMessage}
                   onChange={(e) => setNewMessage(e.target.value)}
-                  placeholder="اكتب رسالتك هنا..."
+                  placeholder="...اكتب رسالتك هنا"
                   className="w-full p-2 bg-[#292929] text-white border border-gray-500 rounded text-right"
                   rows={3}
                 />

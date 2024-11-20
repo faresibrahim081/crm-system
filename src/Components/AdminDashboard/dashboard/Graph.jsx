@@ -108,7 +108,7 @@ const BarChart = () => {
 
   return (
     <div>
-      <div className="bg-[#0d0d0d] py-16 rounded-lg" id="chart">
+      <div className="bg-[#0d0d0d] py-16 rounded-lg mx-6" id="chart">
         <ReactApexChart
           options={options}
           series={series}

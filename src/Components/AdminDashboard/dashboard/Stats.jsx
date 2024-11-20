@@ -27,8 +27,8 @@ const DashboardHead = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-6">
-      <h1 className="font-bold text-[24px] text-right text-white">
+    <div className="flex flex-col gap-6 px-6">
+      <h1 className="font-bold text-[24px] text-right text-white ">
         لوحة التحكم
       </h1>
       <div className="flex flex-col items-center justify-center rounded-lg md:flex-row">
