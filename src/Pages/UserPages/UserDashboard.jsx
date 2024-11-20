@@ -1,46 +1,28 @@
 import Card from "../../Components/UserDashboard/Card";
-import { RiAccountCircleFill } from "react-icons/ri";
 import ProjectDetails from "../../Components/UserDashboard/ProjectDetails";
 import YourTime from "../../Components/UserDashboard/YourTime";
 import ChatModal from "../../Components/AdminDashboard/chats/ChatModal";
+import { FaCode } from "react-icons/fa";
+import { SiAffinitydesigner } from "react-icons/si";
+import { MdOutlineManageAccounts } from "react-icons/md";
 function UserDashboard() {
-  const cards = [
-    {
-      title: "البريد الإلكتروني",
-      content: "ahmed@email.com",
-      icon: <RiAccountCircleFill className="w-6 h-6" />,
-    },
-    {
-      title: "البريد الإلكتروني",
-      content: "ahmed@email.com",
-      icon: <RiAccountCircleFill className="w-6 h-6" />,
-    },
-    {
-      title: "رابط الموقع",
-      content: "ahmed.com",
-      icon: <RiAccountCircleFill className="w-6 h-6" />,
-    },
-    {
-      title: "العنوان",
-      content: "شارع احمد الشرقي المتقاطع من شارع احمد الشرقي...",
-      icon: <RiAccountCircleFill className="w-6 h-6" />,
-    },
-  ];
+
   const detail = [
-    {
-      title: "اداره الحساب",
-      content: "مكتمل",
-      icon: <RiAccountCircleFill className="w-6 h-6" />,
-    },
-    {
-      title: " التصميم",
-      content: "قيد التنفيذ",
-      icon: <RiAccountCircleFill className="w-6 h-6" />,
-    },
     {
       title: " البرمجه",
       content: "لم يتم البدء",
-      icon: <RiAccountCircleFill className="w-6 h-6" />,
+      icon: <FaCode className="w-6 text-black h-6" />,
+    },
+
+    {
+      title: " التصميم",
+      content: "قيد التنفيذ",
+      icon: <SiAffinitydesigner className="w-6 text-black h-6" />,
+    },
+    {
+      title: "اداره الحساب",
+      content: "مكتمل",
+      icon: <MdOutlineManageAccounts className="w-6 text-black h-6" />,
     },
   ];
   const Time = [
@@ -60,27 +42,18 @@ function UserDashboard() {
   return (
     <div className="UserControl bg-[#292929] text-white p-10 text-right">
       <div className="flex items-center justify-between">
-        <h5 className="text-[red]">تسجيل الخروج</h5>
+        <button className="text-[red]">تسجيل الخروج</button>
         <div className="text-right">
           <h3 className="text-[30px] mb-5">لوحة التحكم</h3>
           <p className="pr-4 text-[#959595]">مرحبا اسم العميل</p>
         </div>
       </div>
       <div className="mt-8 mr-5">
-        <h5 className="mb-5">بياناتي</h5>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {cards.map((card, index) => (
-            <Card
-              key={index}
-              title={card.title}
-              content={card.content}
-              icon={card.icon}
-            />
-          ))}
-        </div>
+        <h5 className="mb-5 text-xl">بياناتي</h5>
+          <Card />
       </div>
       <div className="mt-8 mr-5">
-        <h5 className="mb-5">تفاصيل المشروع</h5>
+        <h5 className="mb-5 text-xl">تفاصيل المشروع</h5>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {detail.map((detail, index) => (
             <ProjectDetails
@@ -88,12 +61,13 @@ function UserDashboard() {
               title={detail.title}
               content={detail.content}
               icon={detail.icon}
+              index={index}
             />
           ))}
         </div>
       </div>
       <div className="mt-8 mr-5">
-        <h5 className="mb-5">تحدث مع احد المسئولين</h5>
+        <h5 className="mb-5 text-xl">تحدث مع احد المسئولين</h5>
         <div className="overflow-x-auto rounded-lg">
           <table className="table text-right ">
             <thead className="sticky top-0 bg-[#333] shadow-md">
@@ -127,15 +101,15 @@ function UserDashboard() {
         </div>
       </div>
       <div className="mt-8 mr-5">
-        <h5 className="mb-5">الاوقات المتاحة</h5>{" "}
+        <h5 className="mb-5 text-xl">الاوقات المتاحة</h5>{" "}
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {Time.map((card, index) => (
             <YourTime key={index} title={card.day} />
           ))}
         </div>
       </div>
-      <h5 className="mb-5">الاوقات المحجوزة</h5>
-      <h5 className="mb-5">العقود</h5>
+      <h5 className="mb-5 text-xl">الاوقات المحجوزة</h5>
+      <h5 className="mb-5 text-xl">العقود</h5>
     </div>
   );
 }
