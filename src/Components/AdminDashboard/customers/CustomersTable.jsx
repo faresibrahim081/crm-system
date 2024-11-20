@@ -5,110 +5,47 @@ import Delete from "./Delete";
 
 const initialData = [
   {
-    id: "1",
+    id: "#101",
     createdAt: "2024-09-15T10:00:00Z",
-    name: "محمد علي",
+    name: "أحمد إبراهيم",
     website: "site1.com",
-    email: "mohamed@site1.com",
+    email: "ahmed@site1.com",
   },
   {
-    id: "2",
+    id: "#102",
     createdAt: "2024-10-12T10:00:00Z",
-    name: "نورا حسن",
+    name: "سارة حسين",
     website: "site2.com",
-    email: "nora@site2.com",
+    email: "sara@site2.com",
   },
   {
-    id: "3",
+    id: "#103",
     createdAt: "2024-08-25T10:00:00Z",
-    name: "عمر خالد",
+    name: "خالد سمير",
     website: "site3.com",
-    email: "omar@site3.com",
+    email: "khaled@site3.com",
   },
   {
-    id: "4",
-    createdAt: "2024-11-05T10:00:00Z",
-    name: "فاطمة سعيد",
+    id: "#104",
+    createdAt: "2024-11-20T10:00:00Z",
+    name: "عبدالله محمد",
     website: "site4.com",
-    email: "fatima@site4.com",
+    email: "abdallah@site4.com",
   },
   {
-    id: "5",
-    createdAt: "2024-07-30T10:00:00Z",
-    name: "زياد محمود",
+    id: "#105",
+    createdAt: "2024-11-05T10:00:00Z",
+    name: "ليلى محمود",
+    website: "site4.com",
+    email: "laila@site4.com",
+  },
+  {
+    id: "#106",
+    createdAt: "2024-12-15T10:00:00Z",
+    name: "محمود عبدالله",
     website: "site5.com",
-    email: "ziad@site5.com",
-  },
-  {
-    id: "6",
-    createdAt: "2024-06-20T09:30:00Z",
-    name: "هبة أحمد",
-    website: "site6.com",
-    email: "hiba@site6.com",
-  },
-  {
-    id: "7",
-    createdAt: "2024-05-18T14:15:00Z",
-    name: "أمير يوسف",
-    website: "site7.com",
-    email: "amir@site7.com",
-  },
-  {
-    id: "8",
-    createdAt: "2024-04-10T11:45:00Z",
-    name: "مريم إبراهيم",
-    website: "site8.com",
-    email: "mariam@site8.com",
-  },
-  {
-    id: "9",
-    createdAt: "2024-03-22T08:00:00Z",
-    name: "عبد الله سمير",
-    website: "site9.com",
-    email: "abdullah@site9.com",
-  },
-  {
-    id: "10",
-    createdAt: "2024-02-14T13:20:00Z",
-    name: "رنا عمر",
-    website: "site10.com",
-    email: "rana@site10.com",
-  },
-  {
-    id: "11",
-    createdAt: "2024-01-30T16:40:00Z",
-    name: "حسن مصطفى",
-    website: "site11.com",
-    email: "hassan@site11.com",
-  },
-  {
-    id: "12",
-    createdAt: "2024-12-25T12:00:00Z",
-    name: "ليلى شريف",
-    website: "site12.com",
-    email: "leila@site12.com",
-  },
-  {
-    id: "13",
-    createdAt: "2024-11-11T07:45:00Z",
-    name: "خالد عبد الله",
-    website: "site13.com",
-    email: "khaled@site13.com",
-  },
-  {
-    id: "14",
-    createdAt: "2024-10-20T19:30:00Z",
-    name: "سهى محمد",
-    website: "site14.com",
-    email: "soha@site14.com",
-  },
-  {
-    id: "15",
-    createdAt: "2024-09-05T05:15:00Z",
-    name: "أيمن سامي",
-    website: "site15.com",
-    email: "ayman@site15.com",
-  },
+    email: "mohammed@site5.com",
+  }
 ];
 
 const Table = ({ searchId, sortOrder }) => {
@@ -120,11 +57,10 @@ const Table = ({ searchId, sortOrder }) => {
         initialData.filter((item) => item.id.toString().includes(searchId))
       );
     } else {
-      setData(initialData); // Reset data if searchId is cleared
+      setData(initialData);
     }
   }, [searchId, initialData]);
 
-  // Sort data
   if (sortOrder === "asc") {
     data.sort((a, b) => a.name.localeCompare(b.name));
   } else if (sortOrder === "desc") {
@@ -145,9 +81,9 @@ const Table = ({ searchId, sortOrder }) => {
 
   return (
     <div className="w-full mx-auto bg-[#292929] text-white p-4 h-full">
-      <div className="w-full mx-auto bg-black rounded-lg shadow-md">
-        {/* Add padding for breathing space */}
-        <div className="overflow-auto rounded-lg h-[75vh]">
+      <div className="w-full mx-auto md:bg-black rounded-lg shadow-md">
+        {/* Desktop Table */}
+        <div className="overflow-auto rounded-lg h-[75vh] hidden md:block">
           <table className="w-full text-sm border-collapse">
             <thead className="sticky top-0 bg-[#333] shadow-md">
               <tr>
@@ -157,19 +93,19 @@ const Table = ({ searchId, sortOrder }) => {
                 <th className="p-4 text-center text-gray-300 border-b border-gray-500">
                   الحالة
                 </th>
-                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
+                <th className="p-4 text-center text-gray-300 border-b border-gray-500">
                   تاريخ الإنشاء
                 </th>
-                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
+                <th className="p-4 text-center text-gray-300 border-b border-gray-500">
                   الموقع الإلكتروني
                 </th>
-                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
+                <th className="p-4 text-center text-gray-300 border-b border-gray-500">
                   البريد الإلكتروني
                 </th>
-                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
+                <th className="p-4 text-center text-gray-300 border-b border-gray-500">
                   العميل
                 </th>
-                <th className="p-4 text-right text-gray-300 border-b border-gray-500">
+                <th className="p-4 text-center text-gray-300 border-b border-gray-500">
                   الرمز التعريفي
                 </th>
               </tr>
@@ -194,15 +130,60 @@ const Table = ({ searchId, sortOrder }) => {
                   <td className="p-4 text-center">
                     <StatuesModal />
                   </td>
-                  <td className="p-4 text-right">{item.createdAt}</td>
-                  <td className="p-4 text-right">{item.website}</td>
-                  <td className="p-4 text-right">{item.email}</td>
-                  <td className="p-4 text-right">{item.name}</td>
-                  <td className="p-4 text-right">{item.id}</td>
+                  <td className="p-4 text-center">{item.createdAt}</td>
+                  <td className="p-4 text-center">{item.website}</td>
+                  <td className="p-4 text-center">{item.email}</td>
+                  <td className="p-4 text-center">{item.name}</td>
+                  <td className="p-4 text-center">{item.id}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card Layout */}
+        <div className="md:hidden" dir="rtl">
+          {data.length > 0 ? (
+            data.map((item) => (
+              <div
+                key={item.id}
+                className="p-4 mb-4 bg-[rgb(41,41,41)] rounded-lg shadow-md"
+              >
+                <div className="flex justify-between">
+                  <span className="font-bold">الرمز التعريفي:</span>
+                  <span>{item.id}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="font-bold">العميل:</span>
+                  <span>{item.name}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="font-bold">البريد الإلكتروني:</span>
+                  <span>{item.email}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="font-bold">الموقع الإلكتروني:</span>
+                  <span>{item.website}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="font-bold">تاريخ الإنشاء:</span>
+                  <span>{item.createdAt}</span>
+                </div>
+                <div className="flex items-center justify-around mt-2">
+                  <Delete onDelete={() => handleDelete(item.id)} />
+                  <EditCustomerModal
+                    customer={item}
+                    onSave={(updatedData) => handleSave(item.id, updatedData)}
+                  />
+                  <StatuesModal />
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="p-4 bg-gray-800 rounded-lg">
+              <p className="text-center">لا توجد نتائج</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

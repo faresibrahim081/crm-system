@@ -7,6 +7,7 @@ import { IoTimeOutline } from "react-icons/io5";
 import { CiChat1 } from "react-icons/ci";
 import { PiSignOut } from "react-icons/pi";
 import { FiMenu } from "react-icons/fi"; // Menu icon for mobile
+import { MdOutlinePendingActions } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
@@ -19,6 +20,7 @@ const SideBar = () => {
     { title: "الملاحظات", to: "/tickets", icon: FaRegNoteSticky },
     { title: "المواعيد", to: "/appointments", icon: IoTimeOutline },
     { title: "المحادثات", to: "/chat", icon: CiChat1 },
+    { title: "تأكيد العملاء", to: "/confirmClients", icon: MdOutlinePendingActions },
   ];
 
   return (
@@ -33,7 +35,7 @@ const SideBar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed md:relative md:flex w-80 h-screen flex-col justify-between right-0 bg-[#292929] border-l border-[#00c853] transition-transform duration-300 transform ${
+        className={`fixed flex md:relative md:flex w-80 h-screen flex-col justify-between right-0 bg-[#292929] border-l border-[#00c853] transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } md:translate-x-0 z-40`}
       >
