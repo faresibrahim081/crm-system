@@ -23,9 +23,11 @@ const AdminTicket = () => {
   const API_URL = "https://example.com/api"; // Replace with your actual API URL
 
   return (
-    <div className="flex items-center justify-center text-white">
-      <div className="h-full space-y-4 ">
-      <h1 className="font-bold text-[24px] my-5 pr-3 text-right">الملاحظات</h1>
+    <div className="w-full max-w-[10000px] mx-auto">
+      <div className="h-full space-y-4">
+        <h1 className="font-bold text-[24px] my-5 pr-3 text-right text-white">
+          الملاحظات
+        </h1>
         {tickets.map((ticket, index) => (
           <div
             key={index}
@@ -38,7 +40,7 @@ const AdminTicket = () => {
                   setTickets={setTickets}
                   ticketIndex={index}
                 />
-                <h2 className="mb-1 text-lg font-bold">ملاحظة</h2>
+                <h2 className="mb-1 text-lg font-bold text-white">ملاحظة</h2>
               </div>
               <hr className="mb-2 border-0 h-[0.5px] bg-green-500" />
               <div className="mb-4">
@@ -49,7 +51,7 @@ const AdminTicket = () => {
                 <span className="font-bold text-white">العنوان:</span>{" "}
                 {ticket.title}
               </div>
-              <div className="text-white whitespace-pre-wrap eading-relaxed">
+              <div className="whitespace-pre-wrap eading-relaxed">
                 <p className="mb-2">
                   <span className="font-bold text-white">ملاحظة:</span>{" "}
                   {ticket.notes}

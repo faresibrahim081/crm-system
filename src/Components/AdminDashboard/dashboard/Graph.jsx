@@ -70,7 +70,7 @@ const BarChart = () => {
       },
     },
     yaxis: {
-      max: 30, 
+      max: 30,
       axisBorder: {
         show: false,
       },
@@ -108,7 +108,7 @@ const BarChart = () => {
 
   return (
     <div>
-      <div className="bg-[#0d0d0d] py-10 rounded-lg" id="chart">
+      <div className="bg-[#0d0d0d] py-16 rounded-lg" id="chart">
         <ReactApexChart
           options={options}
           series={series}

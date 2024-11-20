@@ -5,7 +5,7 @@ import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
 const AdminDashboardPage = () => {
   return (
     <div className="flex h-screen ">
-      <div className="flex flex-col justify-around px-5 w-full bg-[#292929] overflow-auto">
+      <div className="flex flex-col justify-around px-4 w-full bg-[#292929] ">
         <Stats />
         <Graph />
       </div>

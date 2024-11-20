@@ -45,7 +45,7 @@ const ReplyButton = ({ ticket, API_URL }) => {
       {/* Reply button to open the popup */}
       <button
         onClick={() => setIsPopupVisible(true)}
-        className="px-2 py-1 bg-[#0d3d2c] text-emerald-400 font-bold rounded-md hover:bg-emerald-400 hover:text-gray-900 transition duration-200"
+        className="px-10 py-1 bg-[#0d3d2c] text-emerald-400 font-bold rounded-md hover:bg-emerald-400 hover:text-gray-900 transition duration-200"
       >
         رد
       </button>
