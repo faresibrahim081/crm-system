@@ -2,13 +2,13 @@ import React from "react";
 
 const Appointments = ({ clientTime = [] }) => {
   return (
-    <div className="flex flex-col items-center justify-around w-full gap-5 " >
-      <div className="flex items-center justify-end w-full pr-10">
-        <h1 className="text-2xl font-semibold text-white 2xl:mr-3">المواعيد</h1>
+    <div className="flex flex-col items-center justify-around w-full gap-5 overflow-auto">
+      <div className="flex items-center justify-end w-full pr-8">
+        <h1 className="text-2xl font-semibold text-white">المواعيد</h1>
       </div>
 
       {/* Grid container */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-8 overflow-y-auto h-[75vh]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pr-4 pl-4 overflow-y-auto h-[75vh]">
         {clientTime.map((item, index) => (
           <div
             key={index}

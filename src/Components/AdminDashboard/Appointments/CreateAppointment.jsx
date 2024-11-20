@@ -19,16 +19,18 @@ const CreateAppointment = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-5 justify-around items-center w-full 2xl:pr-3">
-      <div className="flex justify-end items-center w-full pr-10">
-        <h1 className="text-white font-bold text-2xl">إنشاء ميعاد</h1>
+    <div className="flex flex-col items-center justify-around w-full gap-5 2xl:pr-3">
+      <div className="flex items-center justify-end w-full pt-4 pr-4 ">
+        <h1 className="font-bold text-[24px] text-right text-white">
+          إنشاء ميعاد
+        </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full px-8 items-center">
+      <div className="grid items-center w-full grid-cols-1 gap-6 pl-8 pr-2 md:grid-cols-2 lg:grid-cols-4">
         {/* Button */}
-        <button className="btn btn-active bg-[#00c853] hover:bg-[#0F430F] outline-none text-white font-semibold  px-4 rounded-md py-3">
+        <button className=" bg-[#00c853] hover:bg-[#0F430F] outline-none text-white font-semibold  rounded-md px-6 py-[11px]">
           انشئ ميعاد
         </button>
-        <div className="col-span-3 w-full">
+        <div className="w-full col-span-3">
           <DateTimePicker />
         </div>
       </div>

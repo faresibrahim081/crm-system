@@ -23,8 +23,9 @@ const AdminTicket = () => {
   const API_URL = "https://example.com/api"; // Replace with your actual API URL
 
   return (
-    <div className="flex items-center justify-center p-2 overflow-y-auto text-white">
-      <div className=" space-y-2  h-[80vh]">
+    <div className="flex items-center justify-center text-white">
+      <div className="h-full space-y-4 ">
+      <h1 className="font-bold text-[24px] my-5 pr-3 text-right">الملاحظات</h1>
         {tickets.map((ticket, index) => (
           <div
             key={index}

@@ -45,28 +45,28 @@ const ReplyButton = ({ ticket, API_URL }) => {
       {/* Reply button to open the popup */}
       <button
         onClick={() => setIsPopupVisible(true)}
-        className="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-800 transition"
+        className="px-2 py-1 bg-[#0d3d2c] text-emerald-400 font-bold rounded-md hover:bg-emerald-400 hover:text-gray-900 transition duration-200"
       >
         رد
       </button>
 
       {/* Popup */}
       {isPopupVisible && (
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded shadow-lg w-[300px] text-center text-black">
-            <h2 className="font-bold mb-4">إرسال الرد</h2>
-            <textarea
+        <div className="fixed inset-0 flex items-center justify-center overflow-y-auto bg-black bg-opacity-50">
+          <div className="w-full p-4 max-h-[90vh] overflow-y-auto bg-[#292929] rounded-lg shadow-lg md:w-1/2 lg:w-1/3">
+            <h2 className="mb-4 font-bold text-right">إرسال الرد</h2>
+            <textarea rows={6}
               value={replyText}
               onChange={(e) => setReplyText(e.target.value)}
               placeholder="اكتب ردك هنا"
-              className="w-full p-2 border rounded mb-2 text-black"
+              className="w-full p-2 mb-2 text-right text-white border rounded"
             ></textarea>
-            {error && <p className="text-red-500 mb-2">{error}</p>}
+            {error && <p className="mb-2 text-red-500">{error}</p>}
             <div className="flex justify-between">
               {/* Cancel button */}
               <button
                 onClick={() => setIsPopupVisible(false)}
-                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700 transition"
+                className="px-4 py-2 text-white transition bg-gray-500 rounded hover:bg-gray-700"
                 disabled={isSending}
               >
                 إلغاء
@@ -77,7 +77,9 @@ const ReplyButton = ({ ticket, API_URL }) => {
                 onClick={handleReply}
                 disabled={isSending}
                 className={`bg-green-600 text-white px-4 py-2 rounded shadow ${
-                  isSending ? "opacity-50 cursor-not-allowed" : "hover:bg-green-800 transition"
+                  isSending
+                    ? "opacity-50 cursor-not-allowed"
+                    : "hover:bg-green-800 transition"
                 }`}
               >
                 {isSending ? "جارٍ الإرسال..." : "إرسال"}

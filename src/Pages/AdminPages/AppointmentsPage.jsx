@@ -52,8 +52,8 @@ const AppointmentsPage = () => {
   ];
 
   return (
-    <div className="flex w-full h-screen">
-      <div className="flex flex-col justify-around items-center w-full bg-[#292929] overflow-auto pt-4">
+    <div className="flex w-full h-screen ">
+      <div className="flex flex-col justify-around items-center w-full bg-[#292929] overflow-auto">
         <CreateAppointment />
         <AppointmentsTable clientTime={clientTime} />
       </div>
